@@ -1,0 +1,12 @@
+C:\Users\ClémentGamache\Desktop\ProgZund\ProgZund\bin\Debug\ProgZund.exe.config
+C:\Users\ClémentGamache\Desktop\ProgZund\ProgZund\bin\Debug\ProgZund.exe
+C:\Users\ClémentGamache\Desktop\ProgZund\ProgZund\bin\Debug\ProgZund.pdb
+C:\Users\ClémentGamache\Desktop\ProgZund\ProgZund\obj\Debug\ProgZund.csprojResolveAssemblyReference.cache
+C:\Users\ClémentGamache\Desktop\ProgZund\ProgZund\obj\Debug\ProgZund.Properties.Resources.resources
+C:\Users\ClémentGamache\Desktop\ProgZund\ProgZund\obj\Debug\ProgZund.csproj.GenerateResource.Cache
+C:\Users\ClémentGamache\Desktop\ProgZund\ProgZund\obj\Debug\ProgZund.exe
+C:\Users\ClémentGamache\Desktop\ProgZund\ProgZund\obj\Debug\ProgZund.pdb
+C:\Users\ClémentGamache\Desktop\ProgZund\ProgZund\obj\Debug\ProgZund.FormProgZund.resources
+C:\Users\User\Documents\desktop backup\ProgZund\ProgZund\bin\Debug\ProgZund.exe.config
+C:\Users\User\Documents\desktop backup\ProgZund\ProgZund\obj\Debug\ProgZund.exe
+C:\Users\User\Documents\desktop backup\ProgZund\ProgZund\obj\Debug\ProgZund.pdb
