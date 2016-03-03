@@ -49,7 +49,7 @@
             this.textBoxOutsideHeightSimple = new System.Windows.Forms.TextBox();
             this.tabPageMultiple = new System.Windows.Forms.TabPage();
             this.tableLayoutPanelMulti = new System.Windows.Forms.TableLayoutPanel();
-            this.textBoxInsideWidth10 = new System.Windows.Forms.Label();
+            this.labelInside10 = new System.Windows.Forms.Label();
             this.labelMultiOutsideWidth = new System.Windows.Forms.Label();
             this.labelMultiHeight = new System.Windows.Forms.Label();
             this.labelMultiOutside = new System.Windows.Forms.Label();
@@ -60,10 +60,10 @@
             this.labelInside3 = new System.Windows.Forms.Label();
             this.labelInside4 = new System.Windows.Forms.Label();
             this.labelInside5 = new System.Windows.Forms.Label();
-            this.textBoxInsideWidth6 = new System.Windows.Forms.Label();
-            this.textBoxInsideWidth7 = new System.Windows.Forms.Label();
-            this.textBoxInsideWidth8 = new System.Windows.Forms.Label();
-            this.textBoxInsideWidth9 = new System.Windows.Forms.Label();
+            this.labelInside6 = new System.Windows.Forms.Label();
+            this.labelInside7 = new System.Windows.Forms.Label();
+            this.labelInside8 = new System.Windows.Forms.Label();
+            this.labelInside9 = new System.Windows.Forms.Label();
             this.labelMultiX = new System.Windows.Forms.Label();
             this.labelMultiY = new System.Windows.Forms.Label();
             this.textBoxInsideWidth1 = new System.Windows.Forms.TextBox();
@@ -85,28 +85,29 @@
             this.textBoxInsideHeight3 = new System.Windows.Forms.TextBox();
             this.textBoxInsideX2 = new System.Windows.Forms.TextBox();
             this.textBoxInsideHeight5 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.textBoxInsideWidth6 = new System.Windows.Forms.TextBox();
             this.textBoxInsideX4 = new System.Windows.Forms.TextBox();
             this.textBoxInsideX5 = new System.Windows.Forms.TextBox();
             this.textBoxInsideHeight6 = new System.Windows.Forms.TextBox();
             this.textBoxInsideX6 = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
+            this.textBoxInsideWidth7 = new System.Windows.Forms.TextBox();
             this.textBoxInsideHeight7 = new System.Windows.Forms.TextBox();
             this.textBoxInsideX7 = new System.Windows.Forms.TextBox();
             this.textBoxInsideY7 = new System.Windows.Forms.TextBox();
-            this.textBox33 = new System.Windows.Forms.TextBox();
+            this.textBoxInsideWidth8 = new System.Windows.Forms.TextBox();
             this.textBoxInsideHeight8 = new System.Windows.Forms.TextBox();
             this.textBoxInsideX8 = new System.Windows.Forms.TextBox();
             this.textBoxInsideY8 = new System.Windows.Forms.TextBox();
-            this.textBox37 = new System.Windows.Forms.TextBox();
+            this.textBoxInsideWidth9 = new System.Windows.Forms.TextBox();
             this.textBoxInsideHeight9 = new System.Windows.Forms.TextBox();
             this.textBoxInsideX9 = new System.Windows.Forms.TextBox();
             this.textBoxInsideY9 = new System.Windows.Forms.TextBox();
-            this.textBox41 = new System.Windows.Forms.TextBox();
+            this.textBoxInsideWidth10 = new System.Windows.Forms.TextBox();
             this.textBoxInsideHeight10 = new System.Windows.Forms.TextBox();
             this.textBoxInsideX10 = new System.Windows.Forms.TextBox();
             this.textBoxInsideY10 = new System.Windows.Forms.TextBox();
             this.tabPageFromFile = new System.Windows.Forms.TabPage();
+            this.checkBoxKeepSize = new System.Windows.Forms.CheckBox();
             this.checkBoxKeepRatio = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanelSize = new System.Windows.Forms.TableLayoutPanel();
             this.labelSize = new System.Windows.Forms.Label();
@@ -117,13 +118,13 @@
             this.tableLayoutPanelPadding = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.labelPaddingWidth = new System.Windows.Forms.Label();
-            this.labelPaddingHeight = new System.Windows.Forms.Label();
-            this.textBoxPaddingBottom = new System.Windows.Forms.TextBox();
             this.textBoxPaddingLeft = new System.Windows.Forms.TextBox();
-            this.textBoxPaddingTop = new System.Windows.Forms.TextBox();
             this.textBoxPaddingRight = new System.Windows.Forms.TextBox();
             this.labelPadding = new System.Windows.Forms.Label();
+            this.textBoxPaddingTop = new System.Windows.Forms.TextBox();
+            this.textBoxPaddingBottom = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.checkBoxAddBorders = new System.Windows.Forms.CheckBox();
             this.buttonFileDialog = new System.Windows.Forms.Button();
             this.labelChosenFile = new System.Windows.Forms.Label();
@@ -133,7 +134,7 @@
             this.buttonCut = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.checkBoxKeepSize = new System.Windows.Forms.CheckBox();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.tableLayoutPanelMain.SuspendLayout();
             this.tableLayoutPanelLeft.SuspendLayout();
             this.tableLayoutPanelQty.SuspendLayout();
@@ -264,7 +265,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(610, 723);
             this.tabControl1.TabIndex = 0;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPageSimple
             // 
@@ -299,7 +300,7 @@
             this.tableLayoutPanelSimple.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanelSimple.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanelSimple.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanelSimple.Size = new System.Drawing.Size(489, 177);
+            this.tableLayoutPanelSimple.Size = new System.Drawing.Size(596, 177);
             this.tableLayoutPanelSimple.TabIndex = 0;
             // 
             // labelInsideSimple
@@ -323,7 +324,7 @@
             // labelWidthSimple
             // 
             this.labelWidthSimple.AutoSize = true;
-            this.labelWidthSimple.Location = new System.Drawing.Point(166, 0);
+            this.labelWidthSimple.Location = new System.Drawing.Point(201, 0);
             this.labelWidthSimple.Name = "labelWidthSimple";
             this.labelWidthSimple.Size = new System.Drawing.Size(122, 46);
             this.labelWidthSimple.TabIndex = 2;
@@ -332,7 +333,7 @@
             // labelHeightSimple
             // 
             this.labelHeightSimple.AutoSize = true;
-            this.labelHeightSimple.Location = new System.Drawing.Point(329, 0);
+            this.labelHeightSimple.Location = new System.Drawing.Point(399, 0);
             this.labelHeightSimple.Name = "labelHeightSimple";
             this.labelHeightSimple.Size = new System.Drawing.Size(135, 46);
             this.labelHeightSimple.TabIndex = 3;
@@ -340,7 +341,7 @@
             // 
             // textBoxInsideWidthSimple
             // 
-            this.textBoxInsideWidthSimple.Location = new System.Drawing.Point(166, 61);
+            this.textBoxInsideWidthSimple.Location = new System.Drawing.Point(201, 61);
             this.textBoxInsideWidthSimple.Name = "textBoxInsideWidthSimple";
             this.textBoxInsideWidthSimple.Size = new System.Drawing.Size(100, 53);
             this.textBoxInsideWidthSimple.TabIndex = 0;
@@ -349,7 +350,7 @@
             // 
             // textBoxInsideHeightSimple
             // 
-            this.textBoxInsideHeightSimple.Location = new System.Drawing.Point(329, 61);
+            this.textBoxInsideHeightSimple.Location = new System.Drawing.Point(399, 61);
             this.textBoxInsideHeightSimple.Name = "textBoxInsideHeightSimple";
             this.textBoxInsideHeightSimple.Size = new System.Drawing.Size(100, 53);
             this.textBoxInsideHeightSimple.TabIndex = 1;
@@ -358,7 +359,7 @@
             // 
             // textBoxOutsideWidthSimple
             // 
-            this.textBoxOutsideWidthSimple.Location = new System.Drawing.Point(166, 120);
+            this.textBoxOutsideWidthSimple.Location = new System.Drawing.Point(201, 120);
             this.textBoxOutsideWidthSimple.Name = "textBoxOutsideWidthSimple";
             this.textBoxOutsideWidthSimple.Size = new System.Drawing.Size(100, 53);
             this.textBoxOutsideWidthSimple.TabIndex = 2;
@@ -367,7 +368,7 @@
             // 
             // textBoxOutsideHeightSimple
             // 
-            this.textBoxOutsideHeightSimple.Location = new System.Drawing.Point(329, 120);
+            this.textBoxOutsideHeightSimple.Location = new System.Drawing.Point(399, 120);
             this.textBoxOutsideHeightSimple.Name = "textBoxOutsideHeightSimple";
             this.textBoxOutsideHeightSimple.Size = new System.Drawing.Size(100, 53);
             this.textBoxOutsideHeightSimple.TabIndex = 3;
@@ -381,7 +382,7 @@
             this.tabPageMultiple.Location = new System.Drawing.Point(4, 45);
             this.tabPageMultiple.Name = "tabPageMultiple";
             this.tabPageMultiple.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageMultiple.Size = new System.Drawing.Size(85, 183);
+            this.tabPageMultiple.Size = new System.Drawing.Size(602, 674);
             this.tabPageMultiple.TabIndex = 1;
             this.tabPageMultiple.Text = "Multiple";
             // 
@@ -395,7 +396,7 @@
             this.tableLayoutPanelMulti.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanelMulti.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanelMulti.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideWidth10, 0, 12);
+            this.tableLayoutPanelMulti.Controls.Add(this.labelInside10, 0, 12);
             this.tableLayoutPanelMulti.Controls.Add(this.labelMultiOutsideWidth, 1, 0);
             this.tableLayoutPanelMulti.Controls.Add(this.labelMultiHeight, 2, 0);
             this.tableLayoutPanelMulti.Controls.Add(this.labelMultiOutside, 0, 1);
@@ -406,10 +407,10 @@
             this.tableLayoutPanelMulti.Controls.Add(this.labelInside3, 0, 5);
             this.tableLayoutPanelMulti.Controls.Add(this.labelInside4, 0, 6);
             this.tableLayoutPanelMulti.Controls.Add(this.labelInside5, 0, 7);
-            this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideWidth6, 0, 8);
-            this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideWidth7, 0, 9);
-            this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideWidth8, 0, 10);
-            this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideWidth9, 0, 11);
+            this.tableLayoutPanelMulti.Controls.Add(this.labelInside6, 0, 8);
+            this.tableLayoutPanelMulti.Controls.Add(this.labelInside7, 0, 9);
+            this.tableLayoutPanelMulti.Controls.Add(this.labelInside8, 0, 10);
+            this.tableLayoutPanelMulti.Controls.Add(this.labelInside9, 0, 11);
             this.tableLayoutPanelMulti.Controls.Add(this.labelMultiX, 3, 0);
             this.tableLayoutPanelMulti.Controls.Add(this.labelMultiY, 4, 0);
             this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideWidth1, 1, 3);
@@ -431,24 +432,24 @@
             this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideHeight3, 2, 5);
             this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideX2, 3, 4);
             this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideHeight5, 2, 7);
-            this.tableLayoutPanelMulti.Controls.Add(this.textBox24, 1, 8);
+            this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideWidth6, 1, 8);
             this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideX4, 3, 6);
             this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideX5, 3, 7);
             this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideHeight6, 2, 8);
             this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideX6, 3, 8);
-            this.tableLayoutPanelMulti.Controls.Add(this.textBox29, 1, 9);
+            this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideWidth7, 1, 9);
             this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideHeight7, 2, 9);
             this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideX7, 3, 9);
             this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideY7, 4, 9);
-            this.tableLayoutPanelMulti.Controls.Add(this.textBox33, 1, 10);
+            this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideWidth8, 1, 10);
             this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideHeight8, 2, 10);
             this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideX8, 3, 10);
             this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideY8, 4, 10);
-            this.tableLayoutPanelMulti.Controls.Add(this.textBox37, 1, 11);
+            this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideWidth9, 1, 11);
             this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideHeight9, 2, 11);
             this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideX9, 3, 11);
             this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideY9, 4, 11);
-            this.tableLayoutPanelMulti.Controls.Add(this.textBox41, 1, 12);
+            this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideWidth10, 1, 12);
             this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideHeight10, 2, 12);
             this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideX10, 3, 12);
             this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideY10, 4, 12);
@@ -471,14 +472,14 @@
             this.tableLayoutPanelMulti.Size = new System.Drawing.Size(727, 581);
             this.tableLayoutPanelMulti.TabIndex = 1;
             // 
-            // textBoxInsideWidth10
+            // labelInside10
             // 
-            this.textBoxInsideWidth10.AutoSize = true;
-            this.textBoxInsideWidth10.Location = new System.Drawing.Point(5, 532);
-            this.textBoxInsideWidth10.Name = "textBoxInsideWidth10";
-            this.textBoxInsideWidth10.Size = new System.Drawing.Size(137, 36);
-            this.textBoxInsideWidth10.TabIndex = 15;
-            this.textBoxInsideWidth10.Text = "Inside 10";
+            this.labelInside10.AutoSize = true;
+            this.labelInside10.Location = new System.Drawing.Point(5, 532);
+            this.labelInside10.Name = "labelInside10";
+            this.labelInside10.Size = new System.Drawing.Size(137, 36);
+            this.labelInside10.TabIndex = 15;
+            this.labelInside10.Text = "Inside 10";
             // 
             // labelMultiOutsideWidth
             // 
@@ -513,6 +514,7 @@
             this.textBoxMultiOutsideWidth.Name = "textBoxMultiOutsideWidth";
             this.textBoxMultiOutsideWidth.Size = new System.Drawing.Size(100, 41);
             this.textBoxMultiOutsideWidth.TabIndex = 4;
+            this.textBoxMultiOutsideWidth.Text = "10";
             this.textBoxMultiOutsideWidth.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxMultiOutsideHeight
@@ -521,6 +523,7 @@
             this.textBoxMultiOutsideHeight.Name = "textBoxMultiOutsideHeight";
             this.textBoxMultiOutsideHeight.Size = new System.Drawing.Size(100, 41);
             this.textBoxMultiOutsideHeight.TabIndex = 5;
+            this.textBoxMultiOutsideHeight.Text = "10";
             this.textBoxMultiOutsideHeight.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // labelInside1
@@ -568,41 +571,41 @@
             this.labelInside5.TabIndex = 12;
             this.labelInside5.Text = "Inside 5";
             // 
-            // textBoxInsideWidth6
+            // labelInside6
             // 
-            this.textBoxInsideWidth6.AutoSize = true;
-            this.textBoxInsideWidth6.Location = new System.Drawing.Point(5, 336);
-            this.textBoxInsideWidth6.Name = "textBoxInsideWidth6";
-            this.textBoxInsideWidth6.Size = new System.Drawing.Size(120, 36);
-            this.textBoxInsideWidth6.TabIndex = 11;
-            this.textBoxInsideWidth6.Text = "Inside 6";
+            this.labelInside6.AutoSize = true;
+            this.labelInside6.Location = new System.Drawing.Point(5, 336);
+            this.labelInside6.Name = "labelInside6";
+            this.labelInside6.Size = new System.Drawing.Size(120, 36);
+            this.labelInside6.TabIndex = 11;
+            this.labelInside6.Text = "Inside 6";
             // 
-            // textBoxInsideWidth7
+            // labelInside7
             // 
-            this.textBoxInsideWidth7.AutoSize = true;
-            this.textBoxInsideWidth7.Location = new System.Drawing.Point(5, 385);
-            this.textBoxInsideWidth7.Name = "textBoxInsideWidth7";
-            this.textBoxInsideWidth7.Size = new System.Drawing.Size(120, 36);
-            this.textBoxInsideWidth7.TabIndex = 17;
-            this.textBoxInsideWidth7.Text = "Inside 7";
+            this.labelInside7.AutoSize = true;
+            this.labelInside7.Location = new System.Drawing.Point(5, 385);
+            this.labelInside7.Name = "labelInside7";
+            this.labelInside7.Size = new System.Drawing.Size(120, 36);
+            this.labelInside7.TabIndex = 17;
+            this.labelInside7.Text = "Inside 7";
             // 
-            // textBoxInsideWidth8
+            // labelInside8
             // 
-            this.textBoxInsideWidth8.AutoSize = true;
-            this.textBoxInsideWidth8.Location = new System.Drawing.Point(5, 434);
-            this.textBoxInsideWidth8.Name = "textBoxInsideWidth8";
-            this.textBoxInsideWidth8.Size = new System.Drawing.Size(120, 36);
-            this.textBoxInsideWidth8.TabIndex = 18;
-            this.textBoxInsideWidth8.Text = "Inside 8";
+            this.labelInside8.AutoSize = true;
+            this.labelInside8.Location = new System.Drawing.Point(5, 434);
+            this.labelInside8.Name = "labelInside8";
+            this.labelInside8.Size = new System.Drawing.Size(120, 36);
+            this.labelInside8.TabIndex = 18;
+            this.labelInside8.Text = "Inside 8";
             // 
-            // textBoxInsideWidth9
+            // labelInside9
             // 
-            this.textBoxInsideWidth9.AutoSize = true;
-            this.textBoxInsideWidth9.Location = new System.Drawing.Point(5, 483);
-            this.textBoxInsideWidth9.Name = "textBoxInsideWidth9";
-            this.textBoxInsideWidth9.Size = new System.Drawing.Size(120, 36);
-            this.textBoxInsideWidth9.TabIndex = 16;
-            this.textBoxInsideWidth9.Text = "Inside 9";
+            this.labelInside9.AutoSize = true;
+            this.labelInside9.Location = new System.Drawing.Point(5, 483);
+            this.labelInside9.Name = "labelInside9";
+            this.labelInside9.Size = new System.Drawing.Size(120, 36);
+            this.labelInside9.TabIndex = 16;
+            this.labelInside9.Text = "Inside 9";
             // 
             // labelMultiX
             // 
@@ -628,7 +631,7 @@
             this.textBoxInsideWidth1.Name = "textBoxInsideWidth1";
             this.textBoxInsideWidth1.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideWidth1.TabIndex = 6;
-            this.textBoxInsideWidth1.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
+            this.textBoxInsideWidth1.Text = "0";
             // 
             // textBoxInsideWidth2
             // 
@@ -636,6 +639,7 @@
             this.textBoxInsideWidth2.Name = "textBoxInsideWidth2";
             this.textBoxInsideWidth2.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideWidth2.TabIndex = 10;
+            this.textBoxInsideWidth2.Text = "0";
             this.textBoxInsideWidth2.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideWidth3
@@ -644,6 +648,7 @@
             this.textBoxInsideWidth3.Name = "textBoxInsideWidth3";
             this.textBoxInsideWidth3.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideWidth3.TabIndex = 14;
+            this.textBoxInsideWidth3.Text = "0";
             this.textBoxInsideWidth3.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideWidth4
@@ -652,6 +657,7 @@
             this.textBoxInsideWidth4.Name = "textBoxInsideWidth4";
             this.textBoxInsideWidth4.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideWidth4.TabIndex = 18;
+            this.textBoxInsideWidth4.Text = "0";
             this.textBoxInsideWidth4.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideY1
@@ -660,6 +666,7 @@
             this.textBoxInsideY1.Name = "textBoxInsideY1";
             this.textBoxInsideY1.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideY1.TabIndex = 9;
+            this.textBoxInsideY1.Text = "0";
             this.textBoxInsideY1.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideY2
@@ -668,6 +675,7 @@
             this.textBoxInsideY2.Name = "textBoxInsideY2";
             this.textBoxInsideY2.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideY2.TabIndex = 13;
+            this.textBoxInsideY2.Text = "0";
             this.textBoxInsideY2.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideY3
@@ -676,6 +684,7 @@
             this.textBoxInsideY3.Name = "textBoxInsideY3";
             this.textBoxInsideY3.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideY3.TabIndex = 17;
+            this.textBoxInsideY3.Text = "0";
             this.textBoxInsideY3.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideY4
@@ -684,6 +693,7 @@
             this.textBoxInsideY4.Name = "textBoxInsideY4";
             this.textBoxInsideY4.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideY4.TabIndex = 21;
+            this.textBoxInsideY4.Text = "0";
             this.textBoxInsideY4.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideY5
@@ -692,6 +702,7 @@
             this.textBoxInsideY5.Name = "textBoxInsideY5";
             this.textBoxInsideY5.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideY5.TabIndex = 25;
+            this.textBoxInsideY5.Text = "0";
             this.textBoxInsideY5.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideY6
@@ -700,6 +711,7 @@
             this.textBoxInsideY6.Name = "textBoxInsideY6";
             this.textBoxInsideY6.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideY6.TabIndex = 29;
+            this.textBoxInsideY6.Text = "0";
             this.textBoxInsideY6.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideX3
@@ -708,6 +720,7 @@
             this.textBoxInsideX3.Name = "textBoxInsideX3";
             this.textBoxInsideX3.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideX3.TabIndex = 16;
+            this.textBoxInsideX3.Text = "0";
             this.textBoxInsideX3.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideHeight4
@@ -716,6 +729,7 @@
             this.textBoxInsideHeight4.Name = "textBoxInsideHeight4";
             this.textBoxInsideHeight4.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideHeight4.TabIndex = 19;
+            this.textBoxInsideHeight4.Text = "0";
             this.textBoxInsideHeight4.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideWidth5
@@ -724,6 +738,7 @@
             this.textBoxInsideWidth5.Name = "textBoxInsideWidth5";
             this.textBoxInsideWidth5.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideWidth5.TabIndex = 22;
+            this.textBoxInsideWidth5.Text = "0";
             this.textBoxInsideWidth5.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideHeight2
@@ -732,6 +747,7 @@
             this.textBoxInsideHeight2.Name = "textBoxInsideHeight2";
             this.textBoxInsideHeight2.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideHeight2.TabIndex = 11;
+            this.textBoxInsideHeight2.Text = "0";
             this.textBoxInsideHeight2.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideHeight1
@@ -740,6 +756,7 @@
             this.textBoxInsideHeight1.Name = "textBoxInsideHeight1";
             this.textBoxInsideHeight1.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideHeight1.TabIndex = 7;
+            this.textBoxInsideHeight1.Text = "0";
             this.textBoxInsideHeight1.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideX1
@@ -748,6 +765,7 @@
             this.textBoxInsideX1.Name = "textBoxInsideX1";
             this.textBoxInsideX1.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideX1.TabIndex = 8;
+            this.textBoxInsideX1.Text = "0";
             this.textBoxInsideX1.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideHeight3
@@ -756,6 +774,7 @@
             this.textBoxInsideHeight3.Name = "textBoxInsideHeight3";
             this.textBoxInsideHeight3.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideHeight3.TabIndex = 15;
+            this.textBoxInsideHeight3.Text = "0";
             this.textBoxInsideHeight3.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideX2
@@ -764,6 +783,7 @@
             this.textBoxInsideX2.Name = "textBoxInsideX2";
             this.textBoxInsideX2.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideX2.TabIndex = 12;
+            this.textBoxInsideX2.Text = "0";
             this.textBoxInsideX2.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideHeight5
@@ -772,15 +792,17 @@
             this.textBoxInsideHeight5.Name = "textBoxInsideHeight5";
             this.textBoxInsideHeight5.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideHeight5.TabIndex = 23;
+            this.textBoxInsideHeight5.Text = "0";
             this.textBoxInsideHeight5.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
-            // textBox24
+            // textBoxInsideWidth6
             // 
-            this.textBox24.Location = new System.Drawing.Point(150, 339);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(100, 41);
-            this.textBox24.TabIndex = 26;
-            this.textBox24.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
+            this.textBoxInsideWidth6.Location = new System.Drawing.Point(150, 339);
+            this.textBoxInsideWidth6.Name = "textBoxInsideWidth6";
+            this.textBoxInsideWidth6.Size = new System.Drawing.Size(100, 41);
+            this.textBoxInsideWidth6.TabIndex = 26;
+            this.textBoxInsideWidth6.Text = "0";
+            this.textBoxInsideWidth6.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideX4
             // 
@@ -788,6 +810,7 @@
             this.textBoxInsideX4.Name = "textBoxInsideX4";
             this.textBoxInsideX4.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideX4.TabIndex = 20;
+            this.textBoxInsideX4.Text = "0";
             this.textBoxInsideX4.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideX5
@@ -796,6 +819,7 @@
             this.textBoxInsideX5.Name = "textBoxInsideX5";
             this.textBoxInsideX5.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideX5.TabIndex = 24;
+            this.textBoxInsideX5.Text = "0";
             this.textBoxInsideX5.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideHeight6
@@ -804,6 +828,7 @@
             this.textBoxInsideHeight6.Name = "textBoxInsideHeight6";
             this.textBoxInsideHeight6.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideHeight6.TabIndex = 27;
+            this.textBoxInsideHeight6.Text = "0";
             this.textBoxInsideHeight6.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideX6
@@ -812,15 +837,17 @@
             this.textBoxInsideX6.Name = "textBoxInsideX6";
             this.textBoxInsideX6.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideX6.TabIndex = 28;
+            this.textBoxInsideX6.Text = "0";
             this.textBoxInsideX6.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
-            // textBox29
+            // textBoxInsideWidth7
             // 
-            this.textBox29.Location = new System.Drawing.Point(150, 388);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(100, 41);
-            this.textBox29.TabIndex = 30;
-            this.textBox29.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
+            this.textBoxInsideWidth7.Location = new System.Drawing.Point(150, 388);
+            this.textBoxInsideWidth7.Name = "textBoxInsideWidth7";
+            this.textBoxInsideWidth7.Size = new System.Drawing.Size(100, 41);
+            this.textBoxInsideWidth7.TabIndex = 30;
+            this.textBoxInsideWidth7.Text = "0";
+            this.textBoxInsideWidth7.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideHeight7
             // 
@@ -828,6 +855,7 @@
             this.textBoxInsideHeight7.Name = "textBoxInsideHeight7";
             this.textBoxInsideHeight7.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideHeight7.TabIndex = 31;
+            this.textBoxInsideHeight7.Text = "0";
             this.textBoxInsideHeight7.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideX7
@@ -836,6 +864,7 @@
             this.textBoxInsideX7.Name = "textBoxInsideX7";
             this.textBoxInsideX7.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideX7.TabIndex = 32;
+            this.textBoxInsideX7.Text = "0";
             this.textBoxInsideX7.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideY7
@@ -844,15 +873,17 @@
             this.textBoxInsideY7.Name = "textBoxInsideY7";
             this.textBoxInsideY7.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideY7.TabIndex = 33;
+            this.textBoxInsideY7.Text = "0";
             this.textBoxInsideY7.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
-            // textBox33
+            // textBoxInsideWidth8
             // 
-            this.textBox33.Location = new System.Drawing.Point(150, 437);
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(100, 41);
-            this.textBox33.TabIndex = 34;
-            this.textBox33.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
+            this.textBoxInsideWidth8.Location = new System.Drawing.Point(150, 437);
+            this.textBoxInsideWidth8.Name = "textBoxInsideWidth8";
+            this.textBoxInsideWidth8.Size = new System.Drawing.Size(100, 41);
+            this.textBoxInsideWidth8.TabIndex = 34;
+            this.textBoxInsideWidth8.Text = "0";
+            this.textBoxInsideWidth8.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideHeight8
             // 
@@ -860,6 +891,7 @@
             this.textBoxInsideHeight8.Name = "textBoxInsideHeight8";
             this.textBoxInsideHeight8.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideHeight8.TabIndex = 35;
+            this.textBoxInsideHeight8.Text = "0";
             this.textBoxInsideHeight8.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideX8
@@ -868,6 +900,7 @@
             this.textBoxInsideX8.Name = "textBoxInsideX8";
             this.textBoxInsideX8.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideX8.TabIndex = 36;
+            this.textBoxInsideX8.Text = "0";
             this.textBoxInsideX8.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideY8
@@ -876,15 +909,17 @@
             this.textBoxInsideY8.Name = "textBoxInsideY8";
             this.textBoxInsideY8.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideY8.TabIndex = 37;
+            this.textBoxInsideY8.Text = "0";
             this.textBoxInsideY8.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
-            // textBox37
+            // textBoxInsideWidth9
             // 
-            this.textBox37.Location = new System.Drawing.Point(150, 486);
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(100, 41);
-            this.textBox37.TabIndex = 38;
-            this.textBox37.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
+            this.textBoxInsideWidth9.Location = new System.Drawing.Point(150, 486);
+            this.textBoxInsideWidth9.Name = "textBoxInsideWidth9";
+            this.textBoxInsideWidth9.Size = new System.Drawing.Size(100, 41);
+            this.textBoxInsideWidth9.TabIndex = 38;
+            this.textBoxInsideWidth9.Text = "0";
+            this.textBoxInsideWidth9.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideHeight9
             // 
@@ -892,6 +927,7 @@
             this.textBoxInsideHeight9.Name = "textBoxInsideHeight9";
             this.textBoxInsideHeight9.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideHeight9.TabIndex = 39;
+            this.textBoxInsideHeight9.Text = "0";
             this.textBoxInsideHeight9.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideX9
@@ -900,6 +936,7 @@
             this.textBoxInsideX9.Name = "textBoxInsideX9";
             this.textBoxInsideX9.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideX9.TabIndex = 40;
+            this.textBoxInsideX9.Text = "0";
             this.textBoxInsideX9.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideY9
@@ -908,15 +945,17 @@
             this.textBoxInsideY9.Name = "textBoxInsideY9";
             this.textBoxInsideY9.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideY9.TabIndex = 41;
+            this.textBoxInsideY9.Text = "0";
             this.textBoxInsideY9.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
-            // textBox41
+            // textBoxInsideWidth10
             // 
-            this.textBox41.Location = new System.Drawing.Point(150, 535);
-            this.textBox41.Name = "textBox41";
-            this.textBox41.Size = new System.Drawing.Size(100, 41);
-            this.textBox41.TabIndex = 42;
-            this.textBox41.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
+            this.textBoxInsideWidth10.Location = new System.Drawing.Point(150, 535);
+            this.textBoxInsideWidth10.Name = "textBoxInsideWidth10";
+            this.textBoxInsideWidth10.Size = new System.Drawing.Size(100, 41);
+            this.textBoxInsideWidth10.TabIndex = 42;
+            this.textBoxInsideWidth10.Text = "0";
+            this.textBoxInsideWidth10.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideHeight10
             // 
@@ -924,6 +963,7 @@
             this.textBoxInsideHeight10.Name = "textBoxInsideHeight10";
             this.textBoxInsideHeight10.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideHeight10.TabIndex = 43;
+            this.textBoxInsideHeight10.Text = "0";
             this.textBoxInsideHeight10.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideX10
@@ -932,6 +972,7 @@
             this.textBoxInsideX10.Name = "textBoxInsideX10";
             this.textBoxInsideX10.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideX10.TabIndex = 44;
+            this.textBoxInsideX10.Text = "0";
             this.textBoxInsideX10.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxInsideY10
@@ -940,6 +981,7 @@
             this.textBoxInsideY10.Name = "textBoxInsideY10";
             this.textBoxInsideY10.Size = new System.Drawing.Size(100, 41);
             this.textBoxInsideY10.TabIndex = 45;
+            this.textBoxInsideY10.Text = "0";
             this.textBoxInsideY10.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // tabPageFromFile
@@ -958,17 +1000,29 @@
             this.tabPageFromFile.TabIndex = 2;
             this.tabPageFromFile.Text = "From File";
             // 
+            // checkBoxKeepSize
+            // 
+            this.checkBoxKeepSize.AutoSize = true;
+            this.checkBoxKeepSize.Location = new System.Drawing.Point(8, 349);
+            this.checkBoxKeepSize.Name = "checkBoxKeepSize";
+            this.checkBoxKeepSize.Size = new System.Drawing.Size(277, 40);
+            this.checkBoxKeepSize.TabIndex = 55;
+            this.checkBoxKeepSize.Text = "Keep original size";
+            this.checkBoxKeepSize.UseVisualStyleBackColor = true;
+            this.checkBoxKeepSize.CheckedChanged += new System.EventHandler(this.checkBoxKeepSize_CheckedChanged);
+            // 
             // checkBoxKeepRatio
             // 
             this.checkBoxKeepRatio.AutoSize = true;
-            this.checkBoxKeepRatio.Enabled = false;
+            this.checkBoxKeepRatio.Checked = true;
+            this.checkBoxKeepRatio.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxKeepRatio.Location = new System.Drawing.Point(9, 528);
             this.checkBoxKeepRatio.Name = "checkBoxKeepRatio";
             this.checkBoxKeepRatio.Size = new System.Drawing.Size(377, 40);
             this.checkBoxKeepRatio.TabIndex = 54;
             this.checkBoxKeepRatio.Text = "Keep image original  ratio";
             this.checkBoxKeepRatio.UseVisualStyleBackColor = true;
-            this.checkBoxKeepRatio.CheckedChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
+            this.checkBoxKeepRatio.CheckedChanged += new System.EventHandler(this.checkBoxKeepRatio_CheckedChanged);
             // 
             // tableLayoutPanelSize
             // 
@@ -981,14 +1035,13 @@
             this.tableLayoutPanelSize.Controls.Add(this.textBox2, 1, 1);
             this.tableLayoutPanelSize.Controls.Add(this.textBox3, 2, 1);
             this.tableLayoutPanelSize.Controls.Add(this.labelImageHeight, 2, 0);
-            this.tableLayoutPanelSize.Enabled = false;
             this.tableLayoutPanelSize.Location = new System.Drawing.Point(8, 398);
             this.tableLayoutPanelSize.Name = "tableLayoutPanelSize";
             this.tableLayoutPanelSize.RowCount = 2;
             this.tableLayoutPanelSize.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanelSize.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanelSize.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanelSize.Size = new System.Drawing.Size(405, 124);
+            this.tableLayoutPanelSize.Size = new System.Drawing.Size(591, 124);
             this.tableLayoutPanelSize.TabIndex = 10;
             // 
             // labelSize
@@ -996,14 +1049,14 @@
             this.labelSize.AutoSize = true;
             this.labelSize.Location = new System.Drawing.Point(3, 36);
             this.labelSize.Name = "labelSize";
-            this.labelSize.Size = new System.Drawing.Size(103, 72);
+            this.labelSize.Size = new System.Drawing.Size(156, 36);
             this.labelSize.TabIndex = 4;
             this.labelSize.Text = "Image size";
             // 
             // labelImageWidth
             // 
             this.labelImageWidth.AutoSize = true;
-            this.labelImageWidth.Location = new System.Drawing.Point(138, 0);
+            this.labelImageWidth.Location = new System.Drawing.Point(200, 0);
             this.labelImageWidth.Name = "labelImageWidth";
             this.labelImageWidth.Size = new System.Drawing.Size(93, 36);
             this.labelImageWidth.TabIndex = 3;
@@ -1011,24 +1064,26 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(138, 39);
+            this.textBox2.Location = new System.Drawing.Point(200, 39);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 41);
+            this.textBox2.Size = new System.Drawing.Size(191, 41);
             this.textBox2.TabIndex = 52;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
+            this.textBox2.Text = "10";
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(273, 39);
+            this.textBox3.Location = new System.Drawing.Point(397, 39);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 41);
+            this.textBox3.Size = new System.Drawing.Size(191, 41);
             this.textBox3.TabIndex = 53;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
+            this.textBox3.Text = "10";
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // labelImageHeight
             // 
             this.labelImageHeight.AutoSize = true;
-            this.labelImageHeight.Location = new System.Drawing.Point(273, 0);
+            this.labelImageHeight.Location = new System.Drawing.Point(397, 0);
             this.labelImageHeight.Name = "labelImageHeight";
             this.labelImageHeight.Size = new System.Drawing.Size(101, 36);
             this.labelImageHeight.TabIndex = 2;
@@ -1036,27 +1091,27 @@
             // 
             // tableLayoutPanelPadding
             // 
-            this.tableLayoutPanelPadding.ColumnCount = 3;
-            this.tableLayoutPanelPadding.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanelPadding.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanelPadding.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelPadding.ColumnCount = 4;
+            this.tableLayoutPanelPadding.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelPadding.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelPadding.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelPadding.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelPadding.Controls.Add(this.label5, 0, 2);
             this.tableLayoutPanelPadding.Controls.Add(this.label4, 0, 1);
-            this.tableLayoutPanelPadding.Controls.Add(this.labelPaddingWidth, 1, 0);
-            this.tableLayoutPanelPadding.Controls.Add(this.labelPaddingHeight, 2, 0);
-            this.tableLayoutPanelPadding.Controls.Add(this.textBoxPaddingBottom, 2, 2);
             this.tableLayoutPanelPadding.Controls.Add(this.textBoxPaddingLeft, 1, 1);
-            this.tableLayoutPanelPadding.Controls.Add(this.textBoxPaddingTop, 2, 1);
             this.tableLayoutPanelPadding.Controls.Add(this.textBoxPaddingRight, 1, 2);
             this.tableLayoutPanelPadding.Controls.Add(this.labelPadding, 0, 0);
+            this.tableLayoutPanelPadding.Controls.Add(this.textBoxPaddingTop, 3, 1);
+            this.tableLayoutPanelPadding.Controls.Add(this.textBoxPaddingBottom, 3, 2);
+            this.tableLayoutPanelPadding.Controls.Add(this.label1, 2, 1);
+            this.tableLayoutPanelPadding.Controls.Add(this.label2, 2, 2);
             this.tableLayoutPanelPadding.Location = new System.Drawing.Point(8, 95);
             this.tableLayoutPanelPadding.Name = "tableLayoutPanelPadding";
             this.tableLayoutPanelPadding.RowCount = 3;
             this.tableLayoutPanelPadding.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanelPadding.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanelPadding.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanelPadding.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelPadding.Size = new System.Drawing.Size(442, 164);
+            this.tableLayoutPanelPadding.Size = new System.Drawing.Size(591, 164);
             this.tableLayoutPanelPadding.TabIndex = 4;
             // 
             // label5
@@ -1064,69 +1119,33 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(3, 83);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 72);
+            this.label5.Size = new System.Drawing.Size(86, 36);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Bottom right";
+            this.label5.Text = "Right";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(3, 36);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 36);
+            this.label4.Size = new System.Drawing.Size(64, 36);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Top left";
-            // 
-            // labelPaddingWidth
-            // 
-            this.labelPaddingWidth.AutoSize = true;
-            this.labelPaddingWidth.Location = new System.Drawing.Point(150, 0);
-            this.labelPaddingWidth.Name = "labelPaddingWidth";
-            this.labelPaddingWidth.Size = new System.Drawing.Size(93, 36);
-            this.labelPaddingWidth.TabIndex = 3;
-            this.labelPaddingWidth.Text = "Width";
-            // 
-            // labelPaddingHeight
-            // 
-            this.labelPaddingHeight.AutoSize = true;
-            this.labelPaddingHeight.Location = new System.Drawing.Point(297, 0);
-            this.labelPaddingHeight.Name = "labelPaddingHeight";
-            this.labelPaddingHeight.Size = new System.Drawing.Size(101, 36);
-            this.labelPaddingHeight.TabIndex = 2;
-            this.labelPaddingHeight.Text = "Height";
-            // 
-            // textBoxPaddingBottom
-            // 
-            this.textBoxPaddingBottom.Location = new System.Drawing.Point(297, 86);
-            this.textBoxPaddingBottom.Name = "textBoxPaddingBottom";
-            this.textBoxPaddingBottom.Size = new System.Drawing.Size(100, 41);
-            this.textBoxPaddingBottom.TabIndex = 50;
-            this.textBoxPaddingBottom.Text = "0";
-            this.textBoxPaddingBottom.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
+            this.label4.Text = "Left";
             // 
             // textBoxPaddingLeft
             // 
             this.textBoxPaddingLeft.Location = new System.Drawing.Point(150, 39);
             this.textBoxPaddingLeft.Name = "textBoxPaddingLeft";
-            this.textBoxPaddingLeft.Size = new System.Drawing.Size(100, 41);
+            this.textBoxPaddingLeft.Size = new System.Drawing.Size(141, 41);
             this.textBoxPaddingLeft.TabIndex = 47;
             this.textBoxPaddingLeft.Text = "0";
             this.textBoxPaddingLeft.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
-            // 
-            // textBoxPaddingTop
-            // 
-            this.textBoxPaddingTop.Location = new System.Drawing.Point(297, 39);
-            this.textBoxPaddingTop.Name = "textBoxPaddingTop";
-            this.textBoxPaddingTop.Size = new System.Drawing.Size(100, 41);
-            this.textBoxPaddingTop.TabIndex = 48;
-            this.textBoxPaddingTop.Text = "0";
-            this.textBoxPaddingTop.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
             // 
             // textBoxPaddingRight
             // 
             this.textBoxPaddingRight.Location = new System.Drawing.Point(150, 86);
             this.textBoxPaddingRight.Name = "textBoxPaddingRight";
-            this.textBoxPaddingRight.Size = new System.Drawing.Size(100, 41);
+            this.textBoxPaddingRight.Size = new System.Drawing.Size(141, 41);
             this.textBoxPaddingRight.TabIndex = 49;
             this.textBoxPaddingRight.Text = "0";
             this.textBoxPaddingRight.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
@@ -1139,6 +1158,42 @@
             this.labelPadding.Size = new System.Drawing.Size(126, 36);
             this.labelPadding.TabIndex = 10;
             this.labelPadding.Text = "Padding";
+            // 
+            // textBoxPaddingTop
+            // 
+            this.textBoxPaddingTop.Location = new System.Drawing.Point(444, 39);
+            this.textBoxPaddingTop.Name = "textBoxPaddingTop";
+            this.textBoxPaddingTop.Size = new System.Drawing.Size(144, 41);
+            this.textBoxPaddingTop.TabIndex = 48;
+            this.textBoxPaddingTop.Text = "0";
+            this.textBoxPaddingTop.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
+            // 
+            // textBoxPaddingBottom
+            // 
+            this.textBoxPaddingBottom.Location = new System.Drawing.Point(444, 86);
+            this.textBoxPaddingBottom.Name = "textBoxPaddingBottom";
+            this.textBoxPaddingBottom.Size = new System.Drawing.Size(144, 41);
+            this.textBoxPaddingBottom.TabIndex = 50;
+            this.textBoxPaddingBottom.Text = "0";
+            this.textBoxPaddingBottom.TextChanged += new System.EventHandler(this.textBoxQtyX_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(297, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 36);
+            this.label1.TabIndex = 51;
+            this.label1.Text = "Top";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(297, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(108, 36);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "Bottom";
             // 
             // checkBoxAddBorders
             // 
@@ -1160,6 +1215,7 @@
             this.buttonFileDialog.TabIndex = 46;
             this.buttonFileDialog.Text = "Browse...";
             this.buttonFileDialog.UseVisualStyleBackColor = true;
+            this.buttonFileDialog.Click += new System.EventHandler(this.buttonFileDialog_Click);
             // 
             // labelChosenFile
             // 
@@ -1201,7 +1257,7 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
@@ -1212,14 +1268,14 @@
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(990, 100);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // buttonCut
             // 
             this.buttonCut.Location = new System.Drawing.Point(3, 3);
             this.buttonCut.Name = "buttonCut";
-            this.buttonCut.Size = new System.Drawing.Size(75, 52);
+            this.buttonCut.Size = new System.Drawing.Size(489, 52);
             this.buttonCut.TabIndex = 0;
             this.buttonCut.Text = "Cut";
             this.buttonCut.UseVisualStyleBackColor = true;
@@ -1227,9 +1283,9 @@
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(92, 3);
+            this.buttonSave.Location = new System.Drawing.Point(498, 3);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(75, 52);
+            this.buttonSave.Size = new System.Drawing.Size(489, 52);
             this.buttonSave.TabIndex = 1;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
@@ -1237,20 +1293,12 @@
             // 
             // openFileDialog
             // 
-            this.openFileDialog.FileName = "openFileDialog1";
             this.openFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog_FileOk);
             // 
-            // checkBoxKeepSize
+            // saveFileDialog
             // 
-            this.checkBoxKeepSize.AutoSize = true;
-            this.checkBoxKeepSize.Checked = true;
-            this.checkBoxKeepSize.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxKeepSize.Location = new System.Drawing.Point(8, 349);
-            this.checkBoxKeepSize.Name = "checkBoxKeepSize";
-            this.checkBoxKeepSize.Size = new System.Drawing.Size(277, 40);
-            this.checkBoxKeepSize.TabIndex = 55;
-            this.checkBoxKeepSize.Text = "Keep original size";
-            this.checkBoxKeepSize.UseVisualStyleBackColor = true;
+            this.saveFileDialog.FileName = "MyPlot";
+            this.saveFileDialog.Filter = "Plotter files|*.plt|All files|*.*";
             // 
             // FormProgZund
             // 
@@ -1258,7 +1306,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1779, 906);
             this.Controls.Add(this.tableLayoutPanelMain);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FormProgZund";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProgZund";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Resize += new System.EventHandler(this.FormProgZund_Resize);
@@ -1322,16 +1372,16 @@
         private System.Windows.Forms.Label labelMultiOutside;
         private System.Windows.Forms.TextBox textBoxMultiOutsideWidth;
         private System.Windows.Forms.TextBox textBoxMultiOutsideHeight;
-        private System.Windows.Forms.Label textBoxInsideWidth10;
+        private System.Windows.Forms.Label labelInside10;
         private System.Windows.Forms.Label labelInside1;
         private System.Windows.Forms.Label labelInside2;
         private System.Windows.Forms.Label labelInside3;
         private System.Windows.Forms.Label labelInside4;
         private System.Windows.Forms.Label labelInside5;
-        private System.Windows.Forms.Label textBoxInsideWidth6;
-        private System.Windows.Forms.Label textBoxInsideWidth7;
-        private System.Windows.Forms.Label textBoxInsideWidth8;
-        private System.Windows.Forms.Label textBoxInsideWidth9;
+        private System.Windows.Forms.Label labelInside6;
+        private System.Windows.Forms.Label labelInside7;
+        private System.Windows.Forms.Label labelInside8;
+        private System.Windows.Forms.Label labelInside9;
         private System.Windows.Forms.Label labelMultiX;
         private System.Windows.Forms.Label labelMultiY;
         private System.Windows.Forms.TextBox textBoxInsideWidth1;
@@ -1353,24 +1403,24 @@
         private System.Windows.Forms.TextBox textBoxInsideHeight3;
         private System.Windows.Forms.TextBox textBoxInsideX2;
         private System.Windows.Forms.TextBox textBoxInsideHeight5;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox textBoxInsideWidth6;
         private System.Windows.Forms.TextBox textBoxInsideX4;
         private System.Windows.Forms.TextBox textBoxInsideX5;
         private System.Windows.Forms.TextBox textBoxInsideHeight6;
         private System.Windows.Forms.TextBox textBoxInsideX6;
-        private System.Windows.Forms.TextBox textBox29;
+        private System.Windows.Forms.TextBox textBoxInsideWidth7;
         private System.Windows.Forms.TextBox textBoxInsideHeight7;
         private System.Windows.Forms.TextBox textBoxInsideX7;
         private System.Windows.Forms.TextBox textBoxInsideY7;
-        private System.Windows.Forms.TextBox textBox33;
+        private System.Windows.Forms.TextBox textBoxInsideWidth8;
         private System.Windows.Forms.TextBox textBoxInsideHeight8;
         private System.Windows.Forms.TextBox textBoxInsideX8;
         private System.Windows.Forms.TextBox textBoxInsideY8;
-        private System.Windows.Forms.TextBox textBox37;
+        private System.Windows.Forms.TextBox textBoxInsideWidth9;
         private System.Windows.Forms.TextBox textBoxInsideHeight9;
         private System.Windows.Forms.TextBox textBoxInsideX9;
         private System.Windows.Forms.TextBox textBoxInsideY9;
-        private System.Windows.Forms.TextBox textBox41;
+        private System.Windows.Forms.TextBox textBoxInsideWidth10;
         private System.Windows.Forms.TextBox textBoxInsideHeight10;
         private System.Windows.Forms.TextBox textBoxInsideX10;
         private System.Windows.Forms.TextBox textBoxInsideY10;
@@ -1381,8 +1431,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelPadding;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label labelPaddingWidth;
-        private System.Windows.Forms.Label labelPaddingHeight;
         private System.Windows.Forms.TextBox textBoxPaddingBottom;
         private System.Windows.Forms.TextBox textBoxPaddingLeft;
         private System.Windows.Forms.TextBox textBoxPaddingTop;
@@ -1399,6 +1447,9 @@
         private System.Windows.Forms.Button buttonCut;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.CheckBox checkBoxKeepSize;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }
 
