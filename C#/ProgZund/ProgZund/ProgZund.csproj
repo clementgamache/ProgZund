@@ -58,26 +58,6 @@
     <Compile Include="HPGLCommand.cs" />
     <Compile Include="Machine.cs" />
     <Compile Include="MultiCut.cs" />
-    <Compile Include="Plotr\Gerber\GerberParser.cs" />
-    <Compile Include="Plotr\Gerber\Transformations\Gerber2Hpgl.cs" />
-    <Compile Include="Plotr\Hpgl\Converters\Hpgl2Bmp.cs" />
-    <Compile Include="Plotr\Hpgl\Converters\Hpgl2File.cs" />
-    <Compile Include="Plotr\Hpgl\Converters\Hpgl2Serial.cs" />
-    <Compile Include="Plotr\Hpgl\Converters\Hpgl2SerialConsole.cs" />
-    <Compile Include="Plotr\Hpgl\Language\HpglAllVisitor.cs" />
-    <Compile Include="Plotr\Hpgl\Language\HpglLang.cs" />
-    <Compile Include="Plotr\Hpgl\Language\HpglParser.cs" />
-    <Compile Include="Plotr\Hpgl\Language\HpglProcessor.cs" />
-    <Compile Include="Plotr\Hpgl\Language\HpglVisitor.cs" />
-    <Compile Include="Plotr\Hpgl\Transformations\Absolutizer.cs" />
-    <Compile Include="Plotr\Hpgl\Transformations\Font6.cs" />
-    <Compile Include="Plotr\Hpgl\Transformations\HMatrix.cs" />
-    <Compile Include="Plotr\Hpgl\Transformations\Optimizer.cs" />
-    <Compile Include="Plotr\Hpgl\Transformations\SegmentationOptimizer.cs" />
-    <Compile Include="Plotr\Hpgl\Transformations\Textificator.cs" />
-    <Compile Include="Plotr\Hpgl\Transformations\Transformer.cs" />
-    <Compile Include="Plotr\TextParser.cs" />
-    <Compile Include="Plotr\Vector.cs" />
     <Compile Include="PolyLine.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,24 +75,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Plotr\Samples\cars-mater.hpgl" />
-    <None Include="Plotr\Samples\drawing-1.hpgl" />
-    <None Include="Plotr\Samples\drawing.hpgl" />
-    <None Include="Plotr\Samples\mcqueen1.hpgl" />
-    <None Include="Plotr\Samples\mcqueen3.hpgl" />
-    <None Include="Plotr\Samples\mcqueen5.hpgl" />
-    <None Include="Plotr\Samples\mcqueen6.hpgl" />
-    <None Include="Plotr\Samples\pcbTest.gtl" />
-    <None Include="Plotr\Samples\smurf.hpgl" />
-    <None Include="Plotr\Samples\space-COLUMBIA.hpgl" />
-    <None Include="Plotr\Samples\space-raketa.hpgl" />
-    <None Include="Plotr\Samples\space-shuttle.hpgl" />
-    <None Include="Plotr\Samples\space-SHUTTLE1.hpgl" />
-    <None Include="Plotr\Samples\starwars-deathstar.hpgl" />
-    <None Include="Plotr\Samples\starwars-imperialwalker2.hpgl" />
-    <None Include="Plotr\Samples\test2.hpgl" />
-    <None Include="Plotr\Samples\test3.hpgl" />
-    <None Include="Plotr\Samples\text.hpgl" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -122,14 +84,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Plotr\Samples\2012-12-28 20.25.15.jpg" />
-    <Content Include="Plotr\Samples\2012-12-30 12.14.51.jpg" />
-    <Content Include="Plotr\Samples\opt1.png" />
-    <Content Include="Plotr\Samples\opt2.png" />
-    <Content Include="Plotr\Samples\opt3.png" />
-    <Content Include="Plotr\Samples\result.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
