@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FSUtility;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -19,13 +20,13 @@ namespace ProgZund
             lines_ = new List<System.Windows.Shapes.Line>();
             foreach (System.Windows.Shapes.Line line in lines)
             {
-                if (lines_.Count == 0)
+                if (lines_.Count == 0) //add the first line to the polyline
                 {
                     lines_.Add(line);
                 }
                 else if (
                     lines_.Last().X2 == line.X1 &&
-                    lines_.Last().Y2 == line.Y1)
+                    lines_.Last().Y2 == line.Y1) //lines are joined together
                 {
                     lines_.Add(line);
                 }
@@ -44,12 +45,18 @@ namespace ProgZund
         {
             string s = "";
             string opCode = "PU";
-            double modifier = Machine.POINTSPERINCH;
+            double modifier = Machine.POINTS_PER_INCH;
+            //System.Windows.MessageBox.Show(lines_.Count().ToString());
+            bool flagBegin = true;
             foreach (System.Windows.Shapes.Line line in lines_)
             {
-                s += opCode + (int)(line.X1*modifier) + " " + (int)(line.Y1*modifier) + ";\n";
+                if (flagBegin)
+                {
+                    s += opCode + (int)(line.Y1 * modifier) + " " + (int)(line.X1 * modifier) + ";\n";
+                    flagBegin = false;
+                }
                 opCode = "PD";
-                s += opCode + (int)(line.X2*modifier) + " " + (int)(line.Y2*modifier) + ";\n";
+                s += opCode + (int)(line.Y2*modifier) + " " + (int)(line.X2*modifier) + ";\n";
             }
 
             return s;
@@ -88,7 +95,7 @@ namespace ProgZund
 
         public static List<PolyLine> convertRectangleToPolyLines(System.Windows.Rect rectangle, bool machineRemoval)
         {
-            double removal = machineRemoval ? Machine.INSIDEKNIFEPOINTSREMOVAL / Machine.POINTSPERINCH : 0;
+            double removal = machineRemoval ? Machine.INSIDE_KNIFE_POINTS_REMOVAL / Machine.POINTS_PER_INCH : 0;
             System.Windows.Shapes.Line left, right, top, bottom;
             left = new System.Windows.Shapes.Line();
             right = new System.Windows.Shapes.Line();
@@ -139,30 +146,40 @@ namespace ProgZund
                 }
             }
             if (currentPolyLine.lines_.Count > 0) ret.Add(currentPolyLine);
+            
             return ret;
         }
         public static List<PolyLine> getPolylinesFromFile(string filePath)
         {
-            string allCode = File.ReadAllText(filePath);
-            allCode = Regex.Replace(allCode, "\n", "");
-            allCode = Regex.Replace(allCode, "\r", "");
-            allCode = Regex.Replace(allCode, ",", " ");
-            while (true)
+            //string allCode = File.ReadAllText(filePath);
+            //allCode = Regex.Replace(allCode, "\n", "");
+            //allCode = Regex.Replace(allCode, "\r", "");
+            //allCode = Regex.Replace(allCode, ",", " ");
+            //while (true)
+            //{
+            //    string current = allCode;
+            //    allCode = Regex.Replace(allCode, "  ", " ");
+            //    if (current == allCode) break;
+            //}
+            //string[] commands = allCode.Split(new Char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+            //List<System.Windows.Shapes.Line> lines = new List<System.Windows.Shapes.Line>();
+            //for (int i = 0; i < commands.Length - 1; i++)
+            //{
+            //    HPGLCommand c1 = new HPGLCommand(commands[i]);
+            //    HPGLCommand c2 = new HPGLCommand(commands[i + 1]);
+            //    System.Windows.Shapes.Line l = HPGLCommand.getPLTLine(c1, c2);
+
+            //    if (Math.Abs(l.X1 - l.X2) > 0 || Math.Abs(l.Y1 - l.Y2) > 0) 
+            //    lines.Add(l);
+            //}
+            VirtualMachine v = new VirtualMachine();
+            v.receiveFile(filePath);
+            List<System.Windows.Shapes.Line> allLines = new List<System.Windows.Shapes.Line>();
+            foreach(List<System.Windows.Shapes.Line> l in v.visitedLines)
             {
-                string current = allCode;
-                allCode = Regex.Replace(allCode, "  ", " ");
-                if (current == allCode) break;
+                allLines.AddRange(l);
             }
-            string[] commands = allCode.Split(new Char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
-            List<System.Windows.Shapes.Line> lines = new List<System.Windows.Shapes.Line>();
-            for (int i = 0; i < commands.Length - 1; i++)
-            {
-                HPGLCommand c1 = new HPGLCommand(commands[i]);
-                HPGLCommand c2 = new HPGLCommand(commands[i + 1]);
-                System.Windows.Shapes.Line l = HPGLCommand.getPLTLine(c1, c2);
-                lines.Add(l);
-            }
-            return convertLinesToPolyLines(lines);
+            return convertLinesToPolyLines(allLines);
         }
 
         public static System.Windows.Size getSize(List<PolyLine> polylines)
@@ -179,7 +196,7 @@ namespace ProgZund
             }
             return new System.Windows.Size(maxX - minX, maxY - minY);
         }
-        private static System.Windows.Point getPosition(List<PolyLine> polylines)
+        public static System.Windows.Point getPosition(List<PolyLine> polylines)
         {
             double minX, minY;
             minX = minY = 99999999999;
@@ -200,6 +217,7 @@ namespace ProgZund
                 line.X2 *= scaleX;
                 line.Y2 *= scaleY;
             }
+            //lines_.RemoveAll(x => (x.X1 == x.X2 && x.Y1==x.Y2));
         }
         private void translate(double dx, double dy)
         {

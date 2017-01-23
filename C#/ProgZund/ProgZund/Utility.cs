@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows;
+using FSUtility;
 
 namespace ProgZund
 {
     public class Utility
     {
-        public static int MAXDIGITS = 5; 
         //converts the point from inch scale to value that fits the screen
         public static System.Drawing.Point CONVERT_XY_REAL_TO_POINT(double x, double y, System.Drawing.Size size)
         {
             System.Drawing.Point p = new System.Drawing.Point();
-            p.X = size.Width-1 - (int)(x * size.Width / Machine.TOTALWIDTH);
-            p.Y = size.Height-1 - (int)(y * size.Height / Machine.TOTALHEIGHT);
+            p.X = size.Width-1 - (int)(x * size.Width / Machine.TOTAL_WIDTH);
+            p.Y = size.Height-1 - (int)(y * size.Height / Machine.TOTAL_HEIGHT);
             return p;
         }
         
@@ -25,7 +25,6 @@ namespace ProgZund
         {
             List<PolyLine> polyLines = PolyLine.getPolylinesFromFile(filePath);
             return PolyLine.getSize(polyLines);
-            //return new System.Windows.Size((maxX - minX)/Machine.POINTSPERINCH, (maxY - minY)/Machine.POINTSPERINCH);
         }
 
         public static double dblEntry(string value)
@@ -60,6 +59,17 @@ namespace ProgZund
             return new System.Windows.Rect(x, y, w, h);
         }
 
+
+        public static string getFileBegin()
+        {
+            return "PU; PU; SP1; SJ1; PW 170,195,170,195; VS100; VU100; AS4; PM400; TR1; AU30; PA; ";
+        }
+
+        public static string getFileEnding()
+        {
+            return "PA; PU 120000,120000; SP1; ";
+        }
+
         public static Exception NOTNUMERICENTRYEXCEPTION = new Exception("All entries must be numeric");// = new Exception
     }
     
@@ -73,6 +83,8 @@ namespace ProgZund
                 throw OUTOFBOUNDSEXCEPTION;
             }
         }
+
+
         private static Exception OUTOFBOUNDSEXCEPTION = new Exception("Out of bounds");// = new Exception
     }
 }
