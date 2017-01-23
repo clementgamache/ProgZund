@@ -32,6 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Nakov.TurtleGraphics, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nakov.TurtleGraphics.1.0.0.2\lib\net20\Nakov.TurtleGraphics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -56,13 +60,20 @@
     </Compile>
     <Compile Include="FromFileCut.cs" />
     <Compile Include="HPGLCommand.cs" />
-    <Compile Include="Machine.cs" />
     <Compile Include="MultiCut.cs" />
     <Compile Include="PolyLine.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleCut.cs" />
+    <Compile Include="TurtleSimulationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TurtleSimulationForm.Designer.cs">
+      <DependentUpon>TurtleSimulationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utility.cs" />
+    <Compile Include="VirtualMachine.cs" />
+    <Compile Include="Visitor.cs" />
     <EmbeddedResource Include="FormProgZund.resx">
       <DependentUpon>FormProgZund.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,6 +86,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TurtleSimulationForm.resx">
+      <DependentUpon>TurtleSimulationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -84,6 +99,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FSUtility\FSUtility.fsproj">
+      <Project>{1545c117-13db-40c6-9e21-04d93431ca9c}</Project>
+      <Name>FSUtility</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
