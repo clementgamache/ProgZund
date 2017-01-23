@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FSUtility;
+using Nakov.TurtleGraphics;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +22,7 @@ namespace ProgZund
         {
             cut = new SimpleCut();
             InitializeComponent();
+            //System.Windows.Forms.MessageBox.Show(Machine.FILE_BEGINNING);
         }
 
 
@@ -34,7 +37,7 @@ namespace ProgZund
             try
             {
                 updateCut();
-                pictureBox1.Height = (int)(pictureBox1.Width * Machine.TOTALHEIGHT / Machine.TOTALWIDTH);
+                pictureBox1.Height = (int)(pictureBox1.Width * Machine.TOTAL_HEIGHT / Machine.TOTAL_WIDTH);
                 e.Graphics.Clear(Color.White);
                 Pen p = new Pen(Color.Black);
                 foreach(System.Windows.Shapes.Line line in PolyLine.getAllLines(cut.getAllLines()))
@@ -64,6 +67,7 @@ namespace ProgZund
                 switch (tabControl1.SelectedIndex)
                 {
                     case 0:
+
                         string[] stringValuesSimple = { textBoxInsideWidthSimple.Text, textBoxInsideHeightSimple.Text,
                             textBoxOutsideWidthSimple.Text, textBoxOutsideHeightSimple.Text};
                         iW = Utility.dblEntry(stringValuesSimple[0]);
@@ -72,8 +76,8 @@ namespace ProgZund
                         oH = Utility.dblEntry(stringValuesSimple[3]);
                         Utility<double>.testMax(iW, oW);
                         Utility<double>.testMax(iH, oH);
-                        Utility<double>.testMax(oW * qtyX, Machine.TOTALWIDTH);
-                        Utility<double>.testMax(oH * qtyY, Machine.TOTALHEIGHT);
+                        Utility<double>.testMax(oW * qtyX, Machine.TOTAL_WIDTH);
+                        Utility<double>.testMax(oH * qtyY, Machine.TOTAL_HEIGHT);
 
 
                         ((SimpleCut)cut).updateCut(iW, iH, oW, oH, qtyX, qtyY);
@@ -113,13 +117,13 @@ namespace ProgZund
                         ((MultiCut)cut).updateCut(r, oW, oH, qtyX, qtyY);
                         break;
                     case 2:
-                        if (checkBoxKeepSize.Checked)
+                        if (checkBoxKeepSize.Checked && !string.IsNullOrEmpty(openFileDialog.FileName))
                         {
                             System.Windows.Size s = Utility.getPLTSize(openFileDialog.FileName);
-                            textBox2.Text = Math.Round(s.Width,Utility.MAXDIGITS).ToString();
-                            textBox3.Text = Math.Round(s.Height,Utility.MAXDIGITS).ToString();
+                            textBox2.Text = Math.Round(s.Width, Display.MAX_DIGITS).ToString();
+                            textBox3.Text = Math.Round(s.Height, Display.MAX_DIGITS).ToString();
                         } 
-                        else if (checkBoxKeepRatio.Checked)
+                        else if (checkBoxKeepRatio.Checked && !string.IsNullOrEmpty(openFileDialog.FileName))
                         {
                             setHeightFromWidth();
                         }
@@ -142,14 +146,16 @@ namespace ProgZund
                         Utility<double>.testMax(iW, oW);
                         Utility<double>.testMax(iH, oH);
 
-                        ((FromFileCut)cut).updateCut(openFileDialog.FileName,
-                            lP, rP, tP, bP, 
-                            checkBoxAddBorders.Checked, oW, oH,
-                            qtyX, qtyY);
+                        
+                        if (!string.IsNullOrEmpty( openFileDialog.FileName))
+                            ((FromFileCut)cut).updateCut(openFileDialog.FileName,
+                                lP, rP, tP, bP, 
+                                checkBoxAddBorders.Checked, oW, oH,
+                                qtyX, qtyY);
                         break;
                 }
-                Utility<double>.testMax(oW * qtyX, Machine.TOTALWIDTH);
-                Utility<double>.testMax(oH * qtyY, Machine.TOTALHEIGHT);
+                Utility<double>.testMax(oW * qtyX, Machine.TOTAL_WIDTH);
+                Utility<double>.testMax(oH * qtyY, Machine.TOTAL_HEIGHT);
                 if (oH == 0 || oW == 0)
                     clearCanvas();
                 cut.writeFile(Directory.GetCurrentDirectory() + "plt.plt");
@@ -158,7 +164,8 @@ namespace ProgZund
             {
                 assignCutter();
                 clearCanvas();
-                System.Windows.MessageBox.Show("Failed to update work \n" + ex.Message);
+
+                System.Windows.MessageBox.Show("Failed to update cut \n" + ex.Message);
 
             }
             
@@ -197,6 +204,7 @@ namespace ProgZund
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 saveFileDialog.ShowDialog();
@@ -206,6 +214,7 @@ namespace ProgZund
             {
                 System.Windows.MessageBox.Show("Failed to save \n" + ex.Message);
             }
+            
         }
 
         private void checkBoxKeepSize_CheckedChanged(object sender, EventArgs e)
@@ -216,6 +225,7 @@ namespace ProgZund
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             clearCanvas();
             assignCutter();
             updateCut();
@@ -266,7 +276,7 @@ namespace ProgZund
             }
             catch (Exception ex)
             {
-                System.Windows.MessageBox.Show("Failed to construct cutter \n" + ex.Message);
+                throw new Exception("Failed to construct cutter \n" + ex.Message);
             }
         }
         private void setHeightFromWidth()
@@ -278,12 +288,12 @@ namespace ProgZund
                     System.Windows.Size s = Utility.getPLTSize(openFileDialog.FileName);
                     double ratio = s.Height / s.Width;
                     double iW = Utility.dblEntry(textBox2.Text);
-                    textBox3.Text = Math.Round((iW * ratio), Utility.MAXDIGITS).ToString();
+                    textBox3.Text = Math.Round((iW * ratio), Display.MAX_DIGITS).ToString();
                 }
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
         }
 
@@ -296,12 +306,12 @@ namespace ProgZund
                     System.Windows.Size s = Utility.getPLTSize(openFileDialog.FileName);
                     double ratio = s.Height / s.Width;
                     double iH = Utility.dblEntry(textBox3.Text);
-                    textBox2.Text = Math.Round((iH / ratio), Utility.MAXDIGITS).ToString();
+                    textBox2.Text = Math.Round((iH / ratio), Display.MAX_DIGITS).ToString();
                 }
             }
             catch (Exception ex)
             {
-                
+                throw ex;
             }
         }
 
@@ -320,6 +330,12 @@ namespace ProgZund
             {
                 g.Clear(System.Drawing.Color.White);
             }
+        }
+
+        private void buttonSimulate_Click(object sender, EventArgs e)
+        {
+            TurtleSimulationForm f = new TurtleSimulationForm(cut.getAllLines());
+            f.Show();
         }
     }
 

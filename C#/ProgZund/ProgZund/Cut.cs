@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.IO.Ports;
+using FSUtility;
+using Nakov.TurtleGraphics;
 
 namespace ProgZund
 {
@@ -91,7 +93,7 @@ namespace ProgZund
         private List<PolyLine> getAllInsideLines()
         {
             List<System.Windows.Shapes.Line> insideLines = PolyLine.getAllLines(getInsideLines());
-            List<PolyLine> allLines = new List<PolyLine>();
+            List<System.Windows.Shapes.Line> allLines = new List<System.Windows.Shapes.Line>();
             bool top = false;
             bool left = qtyY_ % 2 == 1;
             for (int i = left ? 0 : qtyX_-1; left ? i < qtyX_ : i >=0 ; i+= left ? 1 : -1)
@@ -105,12 +107,14 @@ namespace ProgZund
                         newLine.X2 = line.X2 + i * outside_.Width;
                         newLine.Y1 = line.Y1 + j * outside_.Height;
                         newLine.Y2 = line.Y2 + j * outside_.Height;
-                        allLines.Add(new PolyLine(newLine));
+                        //insideLines.Add(newLine);
+                        allLines.Add(newLine);
                     }
                 }
                 top = !top;
             }
-            return allLines;
+            return PolyLine.convertLinesToPolyLines(allLines);
+            //return allLines;
         }
         public List<PolyLine> getAllLines()
         {
@@ -130,23 +134,28 @@ namespace ProgZund
         {
             string path = System.IO.Directory.GetParent(Directory.GetCurrentDirectory().ToString()).ToString() + @"\PLT.plt";
             writeFile(path);
-            SerialPort port = new SerialPort(Machine.GET_PORT(), 19200, Parity.None, 8, StopBits.One);
-
-            Byte[] data = File.ReadAllBytes(path);
+            SerialPort port = new SerialPort("COM9", 19200, Parity.None, 8, StopBits.One);
+            port.Open();
+            byte[] data = File.ReadAllBytes(path);
 
             port.Write(data, 0, data.Count());
+            //System.IO.File.Delete(path);
+        }
 
-            System.IO.File.Delete(path);
+        public void simulate()
+        {
+            List<PolyLine> polylines = getAllLines();
+            Turtle.Forward(200);
         }
                
         //computes the plt code associated with the cut
         private string getPLT()
         {
             return
-                //Utility.GET_FILE_BEGINNING() + 
+                Utility.getFileBegin() + 
                 getInsidePLT() +
-                getOutsidePLT();//+ 
-                //Utility.GET_FILE_ENDING(); 
+                getOutsidePLT() + 
+                Utility.getFileEnding(); 
         } 
         private string getOutsidePLT()
         {
