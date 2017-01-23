@@ -71,6 +71,7 @@ namespace ProgZund
                     }
                     Turtle.PenUp();
                 }
+                Turtle.Dispose();
             }
             catch (Exception ex)
             {

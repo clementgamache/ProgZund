@@ -51,30 +51,30 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cut.cs" />
-    <Compile Include="FormProgZund.cs">
+    <Compile Include="Cuts\Cut.cs" />
+    <Compile Include="Forms\FormProgZund.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProgZund.Designer.cs">
+    <Compile Include="Forms\FormProgZund.Designer.cs">
       <DependentUpon>FormProgZund.cs</DependentUpon>
     </Compile>
-    <Compile Include="FromFileCut.cs" />
-    <Compile Include="HPGLCommand.cs" />
-    <Compile Include="MultiCut.cs" />
-    <Compile Include="PolyLine.cs" />
+    <Compile Include="Cuts\FromFileCut.cs" />
+    <Compile Include="HPGL\HPGLCommand.cs" />
+    <Compile Include="Cuts\MultiCut.cs" />
+    <Compile Include="Utilities\PolyLine.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimpleCut.cs" />
-    <Compile Include="TurtleSimulationForm.cs">
+    <Compile Include="Cuts\SimpleCut.cs" />
+    <Compile Include="Forms\TurtleSimulationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TurtleSimulationForm.Designer.cs">
+    <Compile Include="Forms\TurtleSimulationForm.Designer.cs">
       <DependentUpon>TurtleSimulationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utility.cs" />
-    <Compile Include="VirtualMachine.cs" />
-    <Compile Include="Visitor.cs" />
-    <EmbeddedResource Include="FormProgZund.resx">
+    <Compile Include="Utilities\Utility.cs" />
+    <Compile Include="HPGL\VirtualMachine.cs" />
+    <Compile Include="Cuts\Visitor.cs" />
+    <EmbeddedResource Include="Forms\FormProgZund.resx">
       <DependentUpon>FormProgZund.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -86,7 +86,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="TurtleSimulationForm.resx">
+    <EmbeddedResource Include="Forms\TurtleSimulationForm.resx">
       <DependentUpon>TurtleSimulationForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
