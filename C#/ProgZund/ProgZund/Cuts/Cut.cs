@@ -90,6 +90,7 @@ namespace ProgZund
                 new List<System.Windows.Shapes.Line> { rightLine, bottomLine, leftLine, topLine, });
             return PolyLine.convertLinesToPolyLines(lines);
         }
+
         private List<PolyLine> getAllInsideLines()
         {
             List<System.Windows.Shapes.Line> insideLines = PolyLine.getAllLines(getInsideLines());
@@ -134,11 +135,19 @@ namespace ProgZund
         {
             string path = System.IO.Directory.GetParent(Directory.GetCurrentDirectory().ToString()).ToString() + @"\PLT.plt";
             writeFile(path);
-            SerialPort port = new SerialPort("COM9", 19200, Parity.None, 8, StopBits.One);
-            port.Open();
-            byte[] data = File.ReadAllBytes(path);
+            using (SerialPort port = new SerialPort("COM4", 19200, Parity.None, 8, StopBits.One)) 
+{
+                port.Open();
+                byte[] data = File.ReadAllBytes(path);
 
-            port.Write(data, 0, data.Count());
+                port.Write(data, 0, data.Count());
+            }
+
+            //SerialPort port = new SerialPort("COM3", 19200, Parity.None, 8, StopBits.One);
+            //port.Open();
+            //byte[] data = File.ReadAllBytes(path);
+
+            //port.Write(data, 0, data.Count());
             //System.IO.File.Delete(path);
         }
 
