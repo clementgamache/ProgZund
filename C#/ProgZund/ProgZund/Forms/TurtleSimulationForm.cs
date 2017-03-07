@@ -35,6 +35,7 @@ namespace ProgZund
 
         private void buttonPlay_Click(object sender, EventArgs e)
         {
+            Turtle.Dispose();
             float minX, minY, maxX, maxY;
             minX = -400;
             minY = -250;
@@ -43,7 +44,7 @@ namespace ProgZund
             System.Windows.Size size = PolyLine.getSize(polylines);
             System.Windows.Point position = PolyLine.getPosition(polylines);
             float scale;
-            Turtle.Delay = 1;
+            Turtle.Delay = 50;
             if (size.Width/size.Height > (maxX - minX)/(maxY-minY))
             {
                 scale = (float)size.Width / (maxX - minX);
@@ -62,12 +63,12 @@ namespace ProgZund
                 foreach (PolyLine polyline in polylines)
                 {
                     List<Line> lines = polyline.getLines();
-                    Turtle.MoveTo((float)lines[0].X1 / scale + (float)position.X * scale + minX, (float)lines[0].Y1 / scale + (float)position.Y * scale + minY);
+                    Turtle.MoveTo(maxX - (float)lines[0].X1 / scale + (float)position.X * scale, (float)lines[0].Y1 / scale + (float)position.Y * scale + minY);
                     Turtle.PenDown();
                     foreach (Line l in lines)
                     {
                         //Turtle.MoveTo((float)l.X1 / scale + (float)position.X * scale + minX, (float)l.Y1 / scale + (float)position.Y * scale +minY);
-                        Turtle.MoveTo((float)l.X2 / scale + (float)position.X * scale + minX, (float)l.Y2 / scale + (float)position.Y * scale + minY);
+                        Turtle.MoveTo(maxX - (float)l.X2 / scale + (float)position.X * scale, (float)l.Y2 / scale + (float)position.Y * scale + minY);
                     }
                     Turtle.PenUp();
                 }
