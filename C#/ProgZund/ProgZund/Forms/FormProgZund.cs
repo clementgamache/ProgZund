@@ -150,7 +150,7 @@ namespace ProgZund
                         if (!string.IsNullOrEmpty( openFileDialog.FileName))
                             ((FromFileCut)cut).updateCut(openFileDialog.FileName,
                                 lP, rP, tP, bP, 
-                                checkBoxAddBorders.Checked, oW, oH,
+                                checkBoxAddBorders.Checked, checkBoxReverse.Checked, oW, oH,
                                 qtyX, qtyY);
                         break;
                 }

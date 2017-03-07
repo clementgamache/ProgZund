@@ -13,14 +13,14 @@ namespace ProgZund
 
         public void updateCut(
             string filePath,
-            double leftPad, double rightPad, double topPad, double bottomPad,
-            bool addBorders, double outsideWidth, double outsideHeight,
-            int qtyX, int qtyY)
+            double leftPad, double rightPad, double topPad, double bottomPad, 
+            bool addBorders, bool isReverse,
+            double outsideWidth, double outsideHeight, int qtyX, int qtyY)
         {
             try
             {
                 updateBaseCut(outsideWidth, outsideHeight, qtyX, qtyY, addBorders);
-                updateFromFileCut(filePath, leftPad, rightPad, topPad, bottomPad);
+                updateFromFileCut(filePath, leftPad, rightPad, topPad, bottomPad, isReverse);
             }
             catch (Exception ex)
             {
@@ -29,12 +29,13 @@ namespace ProgZund
             }
         }
         private void updateFromFileCut(
-            string fileName, double leftPad, double rightPad, double topPad, double bottomPad)
+            string fileName, double leftPad, double rightPad, double topPad, double bottomPad, bool isReverse)
         {
             leftPad_ = leftPad;
             rightPad_ = rightPad;
             topPad_ = topPad;
             bottomPad_ = bottomPad;
+            isReverse_ = isReverse;
             if (fileName != currentPath_)
             {
                 currentPath_ = fileName;
@@ -46,14 +47,20 @@ namespace ProgZund
         {
             if (string.IsNullOrWhiteSpace(currentPath_) || string.IsNullOrWhiteSpace(currentPath_)) return new List<PolyLine>();
 
-            System.Windows.Size inside = new System.Windows.Size(outside_.Width - leftPad_ - rightPad_, outside_.Height - topPad_ - bottomPad_);
+            System.Windows.Size insideSize = new System.Windows.Size(outside_.Width - leftPad_ - rightPad_, outside_.Height - topPad_ - bottomPad_);
 
-            PolyLine.setSize(basePolylines_, inside);
+            PolyLine.setSize(basePolylines_, insideSize);
             PolyLine.moveTo(basePolylines_, new System.Windows.Point(rightPad_, bottomPad_));
+
+            if (isReverse_)
+            {
+                basePolylines_ = PolyLine.getReversedPolylines(basePolylines_);
+            }
             
             return basePolylines_;
         }
 
+        private bool isReverse_;
         private double leftPad_, rightPad_, topPad_, bottomPad_;
         private string currentPath_;
         private List<PolyLine> basePolylines_;

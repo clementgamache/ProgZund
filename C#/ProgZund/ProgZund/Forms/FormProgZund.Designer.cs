@@ -131,11 +131,12 @@
             this.tableLayoutPanelRight = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonSimulate = new System.Windows.Forms.Button();
             this.buttonCut = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.buttonSimulate = new System.Windows.Forms.Button();
+            this.checkBoxReverse = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanelMain.SuspendLayout();
             this.tableLayoutPanelLeft.SuspendLayout();
             this.tableLayoutPanelQty.SuspendLayout();
@@ -164,7 +165,7 @@
             this.tableLayoutPanelMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanelMain.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.tableLayoutPanelMain.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanelMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanelMain.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanelMain.Name = "tableLayoutPanelMain";
             this.tableLayoutPanelMain.RowCount = 1;
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -181,12 +182,12 @@
             this.tableLayoutPanelLeft.Controls.Add(this.tableLayoutPanelQty, 0, 1);
             this.tableLayoutPanelLeft.Controls.Add(this.tabControl1, 0, 0);
             this.tableLayoutPanelLeft.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanelLeft.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanelLeft.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanelLeft.Name = "tableLayoutPanelLeft";
             this.tableLayoutPanelLeft.RowCount = 2;
             this.tableLayoutPanelLeft.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81F));
             this.tableLayoutPanelLeft.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19F));
-            this.tableLayoutPanelLeft.Size = new System.Drawing.Size(311, 470);
+            this.tableLayoutPanelLeft.Size = new System.Drawing.Size(311, 591);
             this.tableLayoutPanelLeft.TabIndex = 0;
             // 
             // tableLayoutPanelQty
@@ -202,8 +203,8 @@
             this.tableLayoutPanelQty.Controls.Add(this.textBoxQtyX, 1, 1);
             this.tableLayoutPanelQty.Controls.Add(this.textBoxQtyY, 2, 1);
             this.tableLayoutPanelQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanelQty.Location = new System.Drawing.Point(2, 382);
-            this.tableLayoutPanelQty.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanelQty.Location = new System.Drawing.Point(2, 480);
+            this.tableLayoutPanelQty.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanelQty.Name = "tableLayoutPanelQty";
             this.tableLayoutPanelQty.RowCount = 2;
             this.tableLayoutPanelQty.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -245,7 +246,7 @@
             // textBoxQtyX
             // 
             this.textBoxQtyX.Location = new System.Drawing.Point(36, 29);
-            this.textBoxQtyX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxQtyX.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxQtyX.Name = "textBoxQtyX";
             this.textBoxQtyX.Size = new System.Drawing.Size(18, 23);
             this.textBoxQtyX.TabIndex = 55;
@@ -255,7 +256,7 @@
             // textBoxQtyY
             // 
             this.textBoxQtyY.Location = new System.Drawing.Point(70, 29);
-            this.textBoxQtyY.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxQtyY.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxQtyY.Name = "textBoxQtyY";
             this.textBoxQtyY.Size = new System.Drawing.Size(18, 23);
             this.textBoxQtyY.TabIndex = 56;
@@ -270,10 +271,10 @@
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(2, 2);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(307, 376);
+            this.tabControl1.Size = new System.Drawing.Size(307, 474);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -283,9 +284,9 @@
             this.tabPageSimple.Controls.Add(this.tableLayoutPanelSimple);
             this.tabPageSimple.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageSimple.Location = new System.Drawing.Point(4, 34);
-            this.tabPageSimple.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageSimple.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageSimple.Name = "tabPageSimple";
-            this.tabPageSimple.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageSimple.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageSimple.Size = new System.Drawing.Size(299, 338);
             this.tabPageSimple.TabIndex = 0;
             this.tabPageSimple.Text = "Simple";
@@ -306,7 +307,7 @@
             this.tableLayoutPanelSimple.Controls.Add(this.textBoxOutsideWidthSimple, 1, 2);
             this.tableLayoutPanelSimple.Controls.Add(this.textBoxOutsideHeightSimple, 2, 2);
             this.tableLayoutPanelSimple.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanelSimple.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanelSimple.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanelSimple.Name = "tableLayoutPanelSimple";
             this.tableLayoutPanelSimple.RowCount = 3;
             this.tableLayoutPanelSimple.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -358,7 +359,7 @@
             // textBoxInsideWidthSimple
             // 
             this.textBoxInsideWidthSimple.Location = new System.Drawing.Point(134, 43);
-            this.textBoxInsideWidthSimple.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideWidthSimple.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideWidthSimple.Name = "textBoxInsideWidthSimple";
             this.textBoxInsideWidthSimple.Size = new System.Drawing.Size(68, 38);
             this.textBoxInsideWidthSimple.TabIndex = 0;
@@ -368,7 +369,7 @@
             // textBoxInsideHeightSimple
             // 
             this.textBoxInsideHeightSimple.Location = new System.Drawing.Point(266, 43);
-            this.textBoxInsideHeightSimple.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideHeightSimple.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideHeightSimple.Name = "textBoxInsideHeightSimple";
             this.textBoxInsideHeightSimple.Size = new System.Drawing.Size(68, 38);
             this.textBoxInsideHeightSimple.TabIndex = 1;
@@ -378,7 +379,7 @@
             // textBoxOutsideWidthSimple
             // 
             this.textBoxOutsideWidthSimple.Location = new System.Drawing.Point(134, 85);
-            this.textBoxOutsideWidthSimple.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxOutsideWidthSimple.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxOutsideWidthSimple.Name = "textBoxOutsideWidthSimple";
             this.textBoxOutsideWidthSimple.Size = new System.Drawing.Size(68, 38);
             this.textBoxOutsideWidthSimple.TabIndex = 2;
@@ -388,7 +389,7 @@
             // textBoxOutsideHeightSimple
             // 
             this.textBoxOutsideHeightSimple.Location = new System.Drawing.Point(266, 85);
-            this.textBoxOutsideHeightSimple.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxOutsideHeightSimple.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxOutsideHeightSimple.Name = "textBoxOutsideHeightSimple";
             this.textBoxOutsideHeightSimple.Size = new System.Drawing.Size(68, 38);
             this.textBoxOutsideHeightSimple.TabIndex = 3;
@@ -400,10 +401,10 @@
             this.tabPageMultiple.BackColor = System.Drawing.SystemColors.Control;
             this.tabPageMultiple.Controls.Add(this.tableLayoutPanelMulti);
             this.tabPageMultiple.Location = new System.Drawing.Point(4, 34);
-            this.tabPageMultiple.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageMultiple.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageMultiple.Name = "tabPageMultiple";
-            this.tabPageMultiple.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPageMultiple.Size = new System.Drawing.Size(54, 113);
+            this.tabPageMultiple.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPageMultiple.Size = new System.Drawing.Size(89, 197);
             this.tabPageMultiple.TabIndex = 1;
             this.tabPageMultiple.Text = "Multiple";
             // 
@@ -475,7 +476,7 @@
             this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideX10, 3, 12);
             this.tableLayoutPanelMulti.Controls.Add(this.textBoxInsideY10, 4, 12);
             this.tableLayoutPanelMulti.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanelMulti.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanelMulti.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanelMulti.Name = "tableLayoutPanelMulti";
             this.tableLayoutPanelMulti.RowCount = 13;
             this.tableLayoutPanelMulti.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -537,7 +538,7 @@
             // textBoxMultiOutsideWidth
             // 
             this.textBoxMultiOutsideWidth.Location = new System.Drawing.Point(101, 31);
-            this.textBoxMultiOutsideWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMultiOutsideWidth.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMultiOutsideWidth.Name = "textBoxMultiOutsideWidth";
             this.textBoxMultiOutsideWidth.Size = new System.Drawing.Size(68, 30);
             this.textBoxMultiOutsideWidth.TabIndex = 4;
@@ -547,7 +548,7 @@
             // textBoxMultiOutsideHeight
             // 
             this.textBoxMultiOutsideHeight.Location = new System.Drawing.Point(198, 31);
-            this.textBoxMultiOutsideHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMultiOutsideHeight.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMultiOutsideHeight.Name = "textBoxMultiOutsideHeight";
             this.textBoxMultiOutsideHeight.Size = new System.Drawing.Size(68, 30);
             this.textBoxMultiOutsideHeight.TabIndex = 5;
@@ -667,7 +668,7 @@
             // textBoxInsideWidth1
             // 
             this.textBoxInsideWidth1.Location = new System.Drawing.Point(101, 69);
-            this.textBoxInsideWidth1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideWidth1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideWidth1.Name = "textBoxInsideWidth1";
             this.textBoxInsideWidth1.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideWidth1.TabIndex = 6;
@@ -676,7 +677,7 @@
             // textBoxInsideWidth2
             // 
             this.textBoxInsideWidth2.Location = new System.Drawing.Point(101, 105);
-            this.textBoxInsideWidth2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideWidth2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideWidth2.Name = "textBoxInsideWidth2";
             this.textBoxInsideWidth2.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideWidth2.TabIndex = 10;
@@ -686,7 +687,7 @@
             // textBoxInsideWidth3
             // 
             this.textBoxInsideWidth3.Location = new System.Drawing.Point(101, 141);
-            this.textBoxInsideWidth3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideWidth3.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideWidth3.Name = "textBoxInsideWidth3";
             this.textBoxInsideWidth3.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideWidth3.TabIndex = 14;
@@ -696,7 +697,7 @@
             // textBoxInsideWidth4
             // 
             this.textBoxInsideWidth4.Location = new System.Drawing.Point(101, 177);
-            this.textBoxInsideWidth4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideWidth4.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideWidth4.Name = "textBoxInsideWidth4";
             this.textBoxInsideWidth4.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideWidth4.TabIndex = 18;
@@ -706,7 +707,7 @@
             // textBoxInsideY1
             // 
             this.textBoxInsideY1.Location = new System.Drawing.Point(392, 69);
-            this.textBoxInsideY1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideY1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideY1.Name = "textBoxInsideY1";
             this.textBoxInsideY1.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideY1.TabIndex = 9;
@@ -716,7 +717,7 @@
             // textBoxInsideY2
             // 
             this.textBoxInsideY2.Location = new System.Drawing.Point(392, 105);
-            this.textBoxInsideY2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideY2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideY2.Name = "textBoxInsideY2";
             this.textBoxInsideY2.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideY2.TabIndex = 13;
@@ -726,7 +727,7 @@
             // textBoxInsideY3
             // 
             this.textBoxInsideY3.Location = new System.Drawing.Point(392, 141);
-            this.textBoxInsideY3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideY3.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideY3.Name = "textBoxInsideY3";
             this.textBoxInsideY3.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideY3.TabIndex = 17;
@@ -736,7 +737,7 @@
             // textBoxInsideY4
             // 
             this.textBoxInsideY4.Location = new System.Drawing.Point(392, 177);
-            this.textBoxInsideY4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideY4.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideY4.Name = "textBoxInsideY4";
             this.textBoxInsideY4.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideY4.TabIndex = 21;
@@ -746,7 +747,7 @@
             // textBoxInsideY5
             // 
             this.textBoxInsideY5.Location = new System.Drawing.Point(392, 213);
-            this.textBoxInsideY5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideY5.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideY5.Name = "textBoxInsideY5";
             this.textBoxInsideY5.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideY5.TabIndex = 25;
@@ -756,7 +757,7 @@
             // textBoxInsideY6
             // 
             this.textBoxInsideY6.Location = new System.Drawing.Point(392, 249);
-            this.textBoxInsideY6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideY6.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideY6.Name = "textBoxInsideY6";
             this.textBoxInsideY6.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideY6.TabIndex = 29;
@@ -766,7 +767,7 @@
             // textBoxInsideX3
             // 
             this.textBoxInsideX3.Location = new System.Drawing.Point(295, 141);
-            this.textBoxInsideX3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideX3.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideX3.Name = "textBoxInsideX3";
             this.textBoxInsideX3.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideX3.TabIndex = 16;
@@ -776,7 +777,7 @@
             // textBoxInsideHeight4
             // 
             this.textBoxInsideHeight4.Location = new System.Drawing.Point(198, 177);
-            this.textBoxInsideHeight4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideHeight4.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideHeight4.Name = "textBoxInsideHeight4";
             this.textBoxInsideHeight4.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideHeight4.TabIndex = 19;
@@ -786,7 +787,7 @@
             // textBoxInsideWidth5
             // 
             this.textBoxInsideWidth5.Location = new System.Drawing.Point(101, 213);
-            this.textBoxInsideWidth5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideWidth5.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideWidth5.Name = "textBoxInsideWidth5";
             this.textBoxInsideWidth5.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideWidth5.TabIndex = 22;
@@ -796,7 +797,7 @@
             // textBoxInsideHeight2
             // 
             this.textBoxInsideHeight2.Location = new System.Drawing.Point(198, 105);
-            this.textBoxInsideHeight2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideHeight2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideHeight2.Name = "textBoxInsideHeight2";
             this.textBoxInsideHeight2.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideHeight2.TabIndex = 11;
@@ -806,7 +807,7 @@
             // textBoxInsideHeight1
             // 
             this.textBoxInsideHeight1.Location = new System.Drawing.Point(198, 69);
-            this.textBoxInsideHeight1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideHeight1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideHeight1.Name = "textBoxInsideHeight1";
             this.textBoxInsideHeight1.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideHeight1.TabIndex = 7;
@@ -816,7 +817,7 @@
             // textBoxInsideX1
             // 
             this.textBoxInsideX1.Location = new System.Drawing.Point(295, 69);
-            this.textBoxInsideX1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideX1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideX1.Name = "textBoxInsideX1";
             this.textBoxInsideX1.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideX1.TabIndex = 8;
@@ -826,7 +827,7 @@
             // textBoxInsideHeight3
             // 
             this.textBoxInsideHeight3.Location = new System.Drawing.Point(198, 141);
-            this.textBoxInsideHeight3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideHeight3.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideHeight3.Name = "textBoxInsideHeight3";
             this.textBoxInsideHeight3.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideHeight3.TabIndex = 15;
@@ -836,7 +837,7 @@
             // textBoxInsideX2
             // 
             this.textBoxInsideX2.Location = new System.Drawing.Point(295, 105);
-            this.textBoxInsideX2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideX2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideX2.Name = "textBoxInsideX2";
             this.textBoxInsideX2.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideX2.TabIndex = 12;
@@ -846,7 +847,7 @@
             // textBoxInsideHeight5
             // 
             this.textBoxInsideHeight5.Location = new System.Drawing.Point(198, 213);
-            this.textBoxInsideHeight5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideHeight5.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideHeight5.Name = "textBoxInsideHeight5";
             this.textBoxInsideHeight5.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideHeight5.TabIndex = 23;
@@ -856,7 +857,7 @@
             // textBoxInsideWidth6
             // 
             this.textBoxInsideWidth6.Location = new System.Drawing.Point(101, 249);
-            this.textBoxInsideWidth6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideWidth6.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideWidth6.Name = "textBoxInsideWidth6";
             this.textBoxInsideWidth6.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideWidth6.TabIndex = 26;
@@ -866,7 +867,7 @@
             // textBoxInsideX4
             // 
             this.textBoxInsideX4.Location = new System.Drawing.Point(295, 177);
-            this.textBoxInsideX4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideX4.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideX4.Name = "textBoxInsideX4";
             this.textBoxInsideX4.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideX4.TabIndex = 20;
@@ -876,7 +877,7 @@
             // textBoxInsideX5
             // 
             this.textBoxInsideX5.Location = new System.Drawing.Point(295, 213);
-            this.textBoxInsideX5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideX5.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideX5.Name = "textBoxInsideX5";
             this.textBoxInsideX5.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideX5.TabIndex = 24;
@@ -886,7 +887,7 @@
             // textBoxInsideHeight6
             // 
             this.textBoxInsideHeight6.Location = new System.Drawing.Point(198, 249);
-            this.textBoxInsideHeight6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideHeight6.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideHeight6.Name = "textBoxInsideHeight6";
             this.textBoxInsideHeight6.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideHeight6.TabIndex = 27;
@@ -896,7 +897,7 @@
             // textBoxInsideX6
             // 
             this.textBoxInsideX6.Location = new System.Drawing.Point(295, 249);
-            this.textBoxInsideX6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideX6.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideX6.Name = "textBoxInsideX6";
             this.textBoxInsideX6.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideX6.TabIndex = 28;
@@ -906,7 +907,7 @@
             // textBoxInsideWidth7
             // 
             this.textBoxInsideWidth7.Location = new System.Drawing.Point(101, 285);
-            this.textBoxInsideWidth7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideWidth7.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideWidth7.Name = "textBoxInsideWidth7";
             this.textBoxInsideWidth7.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideWidth7.TabIndex = 30;
@@ -916,7 +917,7 @@
             // textBoxInsideHeight7
             // 
             this.textBoxInsideHeight7.Location = new System.Drawing.Point(198, 285);
-            this.textBoxInsideHeight7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideHeight7.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideHeight7.Name = "textBoxInsideHeight7";
             this.textBoxInsideHeight7.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideHeight7.TabIndex = 31;
@@ -926,7 +927,7 @@
             // textBoxInsideX7
             // 
             this.textBoxInsideX7.Location = new System.Drawing.Point(295, 285);
-            this.textBoxInsideX7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideX7.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideX7.Name = "textBoxInsideX7";
             this.textBoxInsideX7.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideX7.TabIndex = 32;
@@ -936,7 +937,7 @@
             // textBoxInsideY7
             // 
             this.textBoxInsideY7.Location = new System.Drawing.Point(392, 285);
-            this.textBoxInsideY7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideY7.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideY7.Name = "textBoxInsideY7";
             this.textBoxInsideY7.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideY7.TabIndex = 33;
@@ -946,7 +947,7 @@
             // textBoxInsideWidth8
             // 
             this.textBoxInsideWidth8.Location = new System.Drawing.Point(101, 321);
-            this.textBoxInsideWidth8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideWidth8.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideWidth8.Name = "textBoxInsideWidth8";
             this.textBoxInsideWidth8.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideWidth8.TabIndex = 34;
@@ -956,7 +957,7 @@
             // textBoxInsideHeight8
             // 
             this.textBoxInsideHeight8.Location = new System.Drawing.Point(198, 321);
-            this.textBoxInsideHeight8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideHeight8.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideHeight8.Name = "textBoxInsideHeight8";
             this.textBoxInsideHeight8.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideHeight8.TabIndex = 35;
@@ -966,7 +967,7 @@
             // textBoxInsideX8
             // 
             this.textBoxInsideX8.Location = new System.Drawing.Point(295, 321);
-            this.textBoxInsideX8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideX8.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideX8.Name = "textBoxInsideX8";
             this.textBoxInsideX8.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideX8.TabIndex = 36;
@@ -976,7 +977,7 @@
             // textBoxInsideY8
             // 
             this.textBoxInsideY8.Location = new System.Drawing.Point(392, 321);
-            this.textBoxInsideY8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideY8.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideY8.Name = "textBoxInsideY8";
             this.textBoxInsideY8.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideY8.TabIndex = 37;
@@ -986,7 +987,7 @@
             // textBoxInsideWidth9
             // 
             this.textBoxInsideWidth9.Location = new System.Drawing.Point(101, 357);
-            this.textBoxInsideWidth9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideWidth9.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideWidth9.Name = "textBoxInsideWidth9";
             this.textBoxInsideWidth9.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideWidth9.TabIndex = 38;
@@ -996,7 +997,7 @@
             // textBoxInsideHeight9
             // 
             this.textBoxInsideHeight9.Location = new System.Drawing.Point(198, 357);
-            this.textBoxInsideHeight9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideHeight9.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideHeight9.Name = "textBoxInsideHeight9";
             this.textBoxInsideHeight9.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideHeight9.TabIndex = 39;
@@ -1006,7 +1007,7 @@
             // textBoxInsideX9
             // 
             this.textBoxInsideX9.Location = new System.Drawing.Point(295, 357);
-            this.textBoxInsideX9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideX9.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideX9.Name = "textBoxInsideX9";
             this.textBoxInsideX9.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideX9.TabIndex = 40;
@@ -1016,7 +1017,7 @@
             // textBoxInsideY9
             // 
             this.textBoxInsideY9.Location = new System.Drawing.Point(392, 357);
-            this.textBoxInsideY9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideY9.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideY9.Name = "textBoxInsideY9";
             this.textBoxInsideY9.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideY9.TabIndex = 41;
@@ -1026,7 +1027,7 @@
             // textBoxInsideWidth10
             // 
             this.textBoxInsideWidth10.Location = new System.Drawing.Point(101, 393);
-            this.textBoxInsideWidth10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideWidth10.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideWidth10.Name = "textBoxInsideWidth10";
             this.textBoxInsideWidth10.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideWidth10.TabIndex = 42;
@@ -1036,7 +1037,7 @@
             // textBoxInsideHeight10
             // 
             this.textBoxInsideHeight10.Location = new System.Drawing.Point(198, 393);
-            this.textBoxInsideHeight10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideHeight10.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideHeight10.Name = "textBoxInsideHeight10";
             this.textBoxInsideHeight10.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideHeight10.TabIndex = 43;
@@ -1046,7 +1047,7 @@
             // textBoxInsideX10
             // 
             this.textBoxInsideX10.Location = new System.Drawing.Point(295, 393);
-            this.textBoxInsideX10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideX10.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideX10.Name = "textBoxInsideX10";
             this.textBoxInsideX10.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideX10.TabIndex = 44;
@@ -1056,7 +1057,7 @@
             // textBoxInsideY10
             // 
             this.textBoxInsideY10.Location = new System.Drawing.Point(392, 393);
-            this.textBoxInsideY10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInsideY10.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInsideY10.Name = "textBoxInsideY10";
             this.textBoxInsideY10.Size = new System.Drawing.Size(68, 30);
             this.textBoxInsideY10.TabIndex = 45;
@@ -1066,6 +1067,7 @@
             // tabPageFromFile
             // 
             this.tabPageFromFile.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageFromFile.Controls.Add(this.checkBoxReverse);
             this.tabPageFromFile.Controls.Add(this.checkBoxKeepSize);
             this.tabPageFromFile.Controls.Add(this.checkBoxKeepRatio);
             this.tabPageFromFile.Controls.Add(this.tableLayoutPanelSize);
@@ -1074,17 +1076,17 @@
             this.tabPageFromFile.Controls.Add(this.buttonFileDialog);
             this.tabPageFromFile.Controls.Add(this.labelChosenFile);
             this.tabPageFromFile.Location = new System.Drawing.Point(4, 34);
-            this.tabPageFromFile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageFromFile.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageFromFile.Name = "tabPageFromFile";
-            this.tabPageFromFile.Size = new System.Drawing.Size(54, 113);
+            this.tabPageFromFile.Size = new System.Drawing.Size(299, 436);
             this.tabPageFromFile.TabIndex = 2;
             this.tabPageFromFile.Text = "From File";
             // 
             // checkBoxKeepSize
             // 
             this.checkBoxKeepSize.AutoSize = true;
-            this.checkBoxKeepSize.Location = new System.Drawing.Point(5, 227);
-            this.checkBoxKeepSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxKeepSize.Location = new System.Drawing.Point(7, 206);
+            this.checkBoxKeepSize.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxKeepSize.Name = "checkBoxKeepSize";
             this.checkBoxKeepSize.Size = new System.Drawing.Size(185, 29);
             this.checkBoxKeepSize.TabIndex = 55;
@@ -1097,8 +1099,8 @@
             this.checkBoxKeepRatio.AutoSize = true;
             this.checkBoxKeepRatio.Checked = true;
             this.checkBoxKeepRatio.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxKeepRatio.Location = new System.Drawing.Point(6, 343);
-            this.checkBoxKeepRatio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxKeepRatio.Location = new System.Drawing.Point(7, 324);
+            this.checkBoxKeepRatio.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxKeepRatio.Name = "checkBoxKeepRatio";
             this.checkBoxKeepRatio.Size = new System.Drawing.Size(250, 29);
             this.checkBoxKeepRatio.TabIndex = 54;
@@ -1117,8 +1119,8 @@
             this.tableLayoutPanelSize.Controls.Add(this.textBox2, 1, 1);
             this.tableLayoutPanelSize.Controls.Add(this.textBox3, 2, 1);
             this.tableLayoutPanelSize.Controls.Add(this.labelImageHeight, 2, 0);
-            this.tableLayoutPanelSize.Location = new System.Drawing.Point(5, 259);
-            this.tableLayoutPanelSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanelSize.Location = new System.Drawing.Point(7, 239);
+            this.tableLayoutPanelSize.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanelSize.Name = "tableLayoutPanelSize";
             this.tableLayoutPanelSize.RowCount = 2;
             this.tableLayoutPanelSize.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -1150,7 +1152,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(133, 27);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(127, 30);
             this.textBox2.TabIndex = 52;
@@ -1160,7 +1162,7 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(264, 27);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(128, 30);
             this.textBox3.TabIndex = 53;
@@ -1193,8 +1195,8 @@
             this.tableLayoutPanelPadding.Controls.Add(this.textBoxPaddingBottom, 3, 2);
             this.tableLayoutPanelPadding.Controls.Add(this.label1, 2, 1);
             this.tableLayoutPanelPadding.Controls.Add(this.label2, 2, 2);
-            this.tableLayoutPanelPadding.Location = new System.Drawing.Point(5, 62);
-            this.tableLayoutPanelPadding.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanelPadding.Location = new System.Drawing.Point(7, 62);
+            this.tableLayoutPanelPadding.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanelPadding.Name = "tableLayoutPanelPadding";
             this.tableLayoutPanelPadding.RowCount = 3;
             this.tableLayoutPanelPadding.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -1226,7 +1228,7 @@
             // textBoxPaddingLeft
             // 
             this.textBoxPaddingLeft.Location = new System.Drawing.Point(100, 27);
-            this.textBoxPaddingLeft.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPaddingLeft.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPaddingLeft.Name = "textBoxPaddingLeft";
             this.textBoxPaddingLeft.Size = new System.Drawing.Size(94, 30);
             this.textBoxPaddingLeft.TabIndex = 47;
@@ -1236,7 +1238,7 @@
             // textBoxPaddingRight
             // 
             this.textBoxPaddingRight.Location = new System.Drawing.Point(100, 61);
-            this.textBoxPaddingRight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPaddingRight.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPaddingRight.Name = "textBoxPaddingRight";
             this.textBoxPaddingRight.Size = new System.Drawing.Size(94, 30);
             this.textBoxPaddingRight.TabIndex = 49;
@@ -1256,7 +1258,7 @@
             // textBoxPaddingTop
             // 
             this.textBoxPaddingTop.Location = new System.Drawing.Point(296, 27);
-            this.textBoxPaddingTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPaddingTop.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPaddingTop.Name = "textBoxPaddingTop";
             this.textBoxPaddingTop.Size = new System.Drawing.Size(96, 30);
             this.textBoxPaddingTop.TabIndex = 48;
@@ -1266,7 +1268,7 @@
             // textBoxPaddingBottom
             // 
             this.textBoxPaddingBottom.Location = new System.Drawing.Point(296, 61);
-            this.textBoxPaddingBottom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPaddingBottom.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPaddingBottom.Name = "textBoxPaddingBottom";
             this.textBoxPaddingBottom.Size = new System.Drawing.Size(96, 30);
             this.textBoxPaddingBottom.TabIndex = 50;
@@ -1296,8 +1298,8 @@
             // checkBoxAddBorders
             // 
             this.checkBoxAddBorders.AutoSize = true;
-            this.checkBoxAddBorders.Location = new System.Drawing.Point(6, 188);
-            this.checkBoxAddBorders.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxAddBorders.Location = new System.Drawing.Point(7, 173);
+            this.checkBoxAddBorders.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxAddBorders.Name = "checkBoxAddBorders";
             this.checkBoxAddBorders.Size = new System.Drawing.Size(138, 29);
             this.checkBoxAddBorders.TabIndex = 51;
@@ -1308,8 +1310,8 @@
             // buttonFileDialog
             // 
             this.buttonFileDialog.AutoSize = true;
-            this.buttonFileDialog.Location = new System.Drawing.Point(5, 25);
-            this.buttonFileDialog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonFileDialog.Location = new System.Drawing.Point(7, 23);
+            this.buttonFileDialog.Margin = new System.Windows.Forms.Padding(2);
             this.buttonFileDialog.Name = "buttonFileDialog";
             this.buttonFileDialog.Size = new System.Drawing.Size(102, 35);
             this.buttonFileDialog.TabIndex = 46;
@@ -1342,7 +1344,7 @@
             this.tableLayoutPanelRight.RowCount = 2;
             this.tableLayoutPanelRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanelRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanelRight.Size = new System.Drawing.Size(571, 462);
+            this.tableLayoutPanelRight.Size = new System.Drawing.Size(571, 583);
             this.tableLayoutPanelRight.TabIndex = 1;
             // 
             // pictureBox1
@@ -1350,9 +1352,9 @@
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(9, 8);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(553, 356);
+            this.pictureBox1.Size = new System.Drawing.Size(553, 452);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
@@ -1368,13 +1370,26 @@
             this.tableLayoutPanel1.Controls.Add(this.buttonSimulate, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.buttonCut, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.buttonSave, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(9, 368);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(9, 464);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(553, 54);
             this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // buttonSimulate
+            // 
+            this.buttonSimulate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSimulate.Location = new System.Drawing.Point(371, 3);
+            this.buttonSimulate.Name = "buttonSimulate";
+            this.buttonSimulate.Size = new System.Drawing.Size(179, 48);
+            this.buttonSimulate.TabIndex = 1;
+            this.buttonSimulate.Text = "Simulate";
+            this.buttonSimulate.UseVisualStyleBackColor = true;
+            this.buttonSimulate.Click += new System.EventHandler(this.buttonSimulate_Click);
             // 
             // buttonCut
             // 
@@ -1382,7 +1397,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCut.Location = new System.Drawing.Point(2, 2);
-            this.buttonCut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCut.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCut.Name = "buttonCut";
             this.buttonCut.Size = new System.Drawing.Size(180, 50);
             this.buttonCut.TabIndex = 0;
@@ -1396,7 +1411,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSave.Location = new System.Drawing.Point(186, 2);
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(180, 50);
             this.buttonSave.TabIndex = 1;
@@ -1413,27 +1428,24 @@
             this.saveFileDialog.FileName = "MyPlot";
             this.saveFileDialog.Filter = "Plotter files|*.plt|All files|*.*";
             // 
-            // buttonSimulate
+            // checkBoxReverse
             // 
-            this.buttonSimulate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSimulate.Location = new System.Drawing.Point(371, 3);
-            this.buttonSimulate.Name = "buttonSimulate";
-            this.buttonSimulate.Size = new System.Drawing.Size(179, 48);
-            this.buttonSimulate.TabIndex = 1;
-            this.buttonSimulate.Text = "Simulate";
-            this.buttonSimulate.UseVisualStyleBackColor = true;
-            this.buttonSimulate.Click += new System.EventHandler(this.buttonSimulate_Click);
+            this.checkBoxReverse.AutoSize = true;
+            this.checkBoxReverse.Location = new System.Drawing.Point(7, 358);
+            this.checkBoxReverse.Name = "checkBoxReverse";
+            this.checkBoxReverse.Size = new System.Drawing.Size(237, 29);
+            this.checkBoxReverse.TabIndex = 56;
+            this.checkBoxReverse.Text = "Read the file backwards";
+            this.checkBoxReverse.UseVisualStyleBackColor = true;
             // 
             // FormProgZund
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 474);
+            this.ClientSize = new System.Drawing.Size(900, 595);
             this.Controls.Add(this.tableLayoutPanelMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormProgZund";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProgZund";
@@ -1578,6 +1590,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.Button buttonSimulate;
+        private System.Windows.Forms.CheckBox checkBoxReverse;
     }
 }
 

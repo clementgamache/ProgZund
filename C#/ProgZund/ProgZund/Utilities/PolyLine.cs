@@ -208,6 +208,16 @@ namespace ProgZund
             return new System.Windows.Point(minX, minY);
         }
 
+        public static List<PolyLine> getReversedPolylines(List<PolyLine> polylines)
+        {
+            List<PolyLine> ret = new List<PolyLine>();
+            foreach (PolyLine p in polylines)
+            {
+                ret.Insert(0, p);
+            }
+            return ret;
+        }
+
         private void scale(double scaleX, double scaleY)
         {
             foreach (System.Windows.Shapes.Line line in lines_)
