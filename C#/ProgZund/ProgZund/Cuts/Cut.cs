@@ -135,20 +135,14 @@ namespace ProgZund
         {
             string path = System.IO.Directory.GetParent(Directory.GetCurrentDirectory().ToString()).ToString() + @"\PLT.plt";
             writeFile(path);
-            using (SerialPort port = new SerialPort("COM4", 19200, Parity.None, 8, StopBits.One)) 
-{
+            using (SerialPort port = new SerialPort("COM4", 19200, Parity.None, 8, StopBits.One))
+            {
                 port.Open();
                 byte[] data = File.ReadAllBytes(path);
 
                 port.Write(data, 0, data.Count());
             }
-
-            //SerialPort port = new SerialPort("COM3", 19200, Parity.None, 8, StopBits.One);
-            //port.Open();
-            //byte[] data = File.ReadAllBytes(path);
-
-            //port.Write(data, 0, data.Count());
-            //System.IO.File.Delete(path);
+            
         }
 
         public void simulate()

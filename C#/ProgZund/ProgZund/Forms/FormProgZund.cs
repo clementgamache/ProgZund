@@ -29,6 +29,8 @@ namespace ProgZund
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             updatePicture(e);
+            float a = 0;
+            a = 8234 * e.Graphics.PageScale;
 
         }
 

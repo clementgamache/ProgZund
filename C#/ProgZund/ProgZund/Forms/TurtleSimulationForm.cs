@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Shapes;
@@ -35,6 +36,25 @@ namespace ProgZund
 
         private void buttonPlay_Click(object sender, EventArgs e)
         {
+            //backgroundWorker.RunWorkerAsync();
+            buttonPlay.Enabled = false;
+            buttonClose.Enabled = false;
+            trackBar1.Enabled = false;
+            try
+            {
+                runTurtle();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            buttonPlay.Enabled = true;
+            buttonClose.Enabled = true;
+            trackBar1.Enabled = true;
+        }
+        
+        private void runTurtle()
+        {
             Turtle.Dispose();
             float minX, minY, maxX, maxY;
             minX = -400;
@@ -44,8 +64,8 @@ namespace ProgZund
             System.Windows.Size size = PolyLine.getSize(polylines);
             System.Windows.Point position = PolyLine.getPosition(polylines);
             float scale;
-            Turtle.Delay = 50;
-            if (size.Width/size.Height > (maxX - minX)/(maxY-minY))
+            Turtle.Delay = Math.Pow(2.0, 10-((double)(trackBar1.Value)));
+            if (size.Width / size.Height > (maxX - minX) / (maxY - minY))
             {
                 scale = (float)size.Width / (maxX - minX);
             }
@@ -78,5 +98,6 @@ namespace ProgZund
                 MessageBox.Show(ex.Message);
             }
         }
+        
     }
 }

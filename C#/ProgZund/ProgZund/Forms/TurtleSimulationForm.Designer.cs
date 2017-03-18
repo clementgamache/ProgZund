@@ -30,6 +30,8 @@
         {
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonPlay = new System.Windows.Forms.Button();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonClose
@@ -53,6 +55,13 @@
             this.buttonPlay.UseVisualStyleBackColor = true;
             this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
             // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(12, 71);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(75, 45);
+            this.trackBar1.TabIndex = 2;
+            // 
             // TurtleSimulationForm
             // 
             this.AcceptButton = this.buttonPlay;
@@ -60,6 +69,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonClose;
             this.ClientSize = new System.Drawing.Size(536, 301);
+            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.buttonPlay);
             this.Controls.Add(this.buttonClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -69,7 +79,9 @@
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TurtleSimulationForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -77,5 +89,6 @@
 
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Button buttonPlay;
+        private System.Windows.Forms.TrackBar trackBar1;
     }
 }
