@@ -64,7 +64,7 @@ namespace ProgZund
             System.Windows.Size size = PolyLine.getSize(polylines);
             System.Windows.Point position = PolyLine.getPosition(polylines);
             float scale;
-            Turtle.Delay = Math.Pow(2.0, 10-((double)(trackBar1.Value)));
+            Turtle.Delay = (int)(Math.Pow(2.0, 10-((double)(trackBar1.Value))));
             if (size.Width / size.Height > (maxX - minX) / (maxY - minY))
             {
                 scale = (float)size.Width / (maxX - minX);

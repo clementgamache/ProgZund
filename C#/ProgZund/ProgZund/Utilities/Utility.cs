@@ -62,7 +62,7 @@ namespace ProgZund
 
         public static string getFileBegin()
         {
-            return "PU; PU; SP1; SJ1; PW 170,195,170,195; VS100; VU100; AS4; PM400; TR1; AU30; PA; ";
+            return "PU; PU; SP1; SJ1; PW 170,195,170,195; VS20; VU100; AS4; PM400; TR1; AU30; PA; ";
         }
 
         public static string getFileEnding()
